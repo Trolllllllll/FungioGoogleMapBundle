@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Services\Directions;
+namespace Fungio\GoogleMapBundle\Tests\Model\Services\Directions;
 
-use Ivory\GoogleMap\Services\Base\TravelMode;
-use Ivory\GoogleMap\Services\Base\UnitSystem;
-use Ivory\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder;
+use Fungio\GoogleMap\Services\Base\TravelMode;
+use Fungio\GoogleMap\Services\Base\UnitSystem;
+use Fungio\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder;
 
 /**
  * Directions request builder test.
@@ -22,7 +22,7 @@ use Ivory\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder;
  */
 class DirectionsRequestBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder */
     protected $directionsRequestBuilder;
 
     /**
@@ -31,7 +31,7 @@ class DirectionsRequestBuilderTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         $this->directionsRequestBuilder = new DirectionsRequestBuilder(
-            'Ivory\GoogleMap\Services\Directions\DirectionsRequest'
+            'Fungio\GoogleMap\Services\Directions\DirectionsRequest'
         );
     }
 
@@ -46,7 +46,7 @@ class DirectionsRequestBuilderTest extends \PHPUnit_Framework_TestCase
     public function testInitialState()
     {
         $this->assertSame(
-            'Ivory\GoogleMap\Services\Directions\DirectionsRequest',
+            'Fungio\GoogleMap\Services\Directions\DirectionsRequest',
             $this->directionsRequestBuilder->getClass()
         );
 

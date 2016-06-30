@@ -5,14 +5,14 @@
 ### By configuration file
 
 By default, the bundle doesn't need any configuration. Most of the service have a default configuration which allows
-you to use the given objects like they are. The ``ivory_google_map.distance_matrix_request`` service is not one of them.
+you to use the given objects like they are. The ``fungio_google_map.distance_matrix_request`` service is not one of them.
 The configuration describes below is this default configuration but if you don't provide at least one value (for the
 `distance_matrix` or `distance_matrix_request` nodes), the service will not be registered.
 
 ```yaml
 # app/config/config.yml
 
-ivory_google_map:
+fungio_google_map:
     distance_matrix_request:
         # Your own distance matrix request class
         class: "My\Fucking\DirectionsRequest"
@@ -50,11 +50,11 @@ ivory_google_map:
 <?php
 
 /**
- * Requests & configure the ivory google map distance matrix request service
+ * Requests & configure the fungio google map distance matrix request service
  *
- * @var Ivory\GoogleMap\Services\DistanceMatrix\DistanceMatrixRequest $request
+ * @var Fungio\GoogleMap\Services\DistanceMatrix\DistanceMatrixRequest $request
  */
-$request = $this->get('ivory_google_map.distance_matrix_request');
+$request = $this->get('fungio_google_map.distance_matrix_request');
 ```
 
 ### By coding
@@ -63,11 +63,11 @@ $request = $this->get('ivory_google_map.distance_matrix_request');
 <?php
 
 /**
- * Requests & configure the ivory google map distance matrix request service
+ * Requests & configure the fungio google map distance matrix request service
  *
- * @var Ivory\GoogleMap\Services\DistanceMatrix\DistanceMatrixRequest $request
+ * @var Fungio\GoogleMap\Services\DistanceMatrix\DistanceMatrixRequest $request
  */
-$request = $this->get('ivory_google_map.distance_matrix_request');
+$request = $this->get('fungio_google_map.distance_matrix_request');
 
 // Set your origins
 $request->setOrigins(array('New York'));

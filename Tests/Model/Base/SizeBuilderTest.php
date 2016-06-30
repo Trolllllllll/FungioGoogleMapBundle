@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Base;
+namespace Fungio\GoogleMapBundle\Tests\Model\Base;
 
-use Ivory\GoogleMapBundle\Model\Base\SizeBuilder;
+use Fungio\GoogleMapBundle\Model\Base\SizeBuilder;
 
 /**
  * Size builder test.
@@ -20,7 +20,7 @@ use Ivory\GoogleMapBundle\Model\Base\SizeBuilder;
  */
 class SizeBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Base\SizeBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Base\SizeBuilder */
     protected $sizeBuilder;
 
     /**
@@ -28,7 +28,7 @@ class SizeBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->sizeBuilder = new SizeBuilder('Ivory\GoogleMap\Base\Size');
+        $this->sizeBuilder = new SizeBuilder('Fungio\GoogleMap\Base\Size');
     }
 
     /**
@@ -41,7 +41,7 @@ class SizeBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testInitialState()
     {
-        $this->assertSame('Ivory\GoogleMap\Base\Size', $this->sizeBuilder->getClass());
+        $this->assertSame('Fungio\GoogleMap\Base\Size', $this->sizeBuilder->getClass());
         $this->assertNull($this->sizeBuilder->getPrefixJavascriptVariable());
         $this->assertNull($this->sizeBuilder->getWidth());
         $this->assertNull($this->sizeBuilder->getHeight());

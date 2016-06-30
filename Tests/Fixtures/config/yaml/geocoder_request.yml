@@ -1,4 +1,4 @@
-ivory_google_map:
+fungio_google_map:
     geocoder_request:
         address: "address"
         coordinate:

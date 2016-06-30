@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Services\DistanceMatrix;
+namespace Fungio\GoogleMapBundle\Model\Services\DistanceMatrix;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Fungio\GoogleMapBundle\Model\AbstractBuilder;
 
 /**
  * Distance matrix request builder.
@@ -74,7 +74,7 @@ class DistanceMatrixRequestBuilder extends AbstractBuilder
      *
      * @param boolean $avoidHighways TRUE if it avoids highways else FALSE.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder The builder.
      */
     public function setAvoidHighways($avoidHighways)
     {
@@ -98,7 +98,7 @@ class DistanceMatrixRequestBuilder extends AbstractBuilder
      *
      * @param boolean $avoidTolls TRUE if it avoids tolls else FALSE.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder The builder.
      */
     public function setAvoidTolls($avoidTolls)
     {
@@ -122,7 +122,7 @@ class DistanceMatrixRequestBuilder extends AbstractBuilder
      *
      * @param array $origins The origins.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder The distance matrix request builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder The distance matrix request builder.
      */
     public function setOrigins(array $origins)
     {
@@ -146,7 +146,7 @@ class DistanceMatrixRequestBuilder extends AbstractBuilder
      *
      * @param array $destinations The destinations.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder The distance matrix request builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder The distance matrix request builder.
      */
     public function setDestinations(array $destinations)
     {
@@ -170,7 +170,7 @@ class DistanceMatrixRequestBuilder extends AbstractBuilder
      *
      * @param string $travelMode The travel mode.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder The distance matrix request builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder The distance matrix request builder.
      */
     public function setTravelMode($travelMode)
     {
@@ -194,7 +194,7 @@ class DistanceMatrixRequestBuilder extends AbstractBuilder
      *
      * @param string $unitSystem The unit system.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder The distance matrix request builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder The distance matrix request builder.
      */
     public function setUnitSystem($unitSystem)
     {
@@ -218,7 +218,7 @@ class DistanceMatrixRequestBuilder extends AbstractBuilder
      *
      * @param string $region The region.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder The distance matrix request builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder The distance matrix request builder.
      */
     public function setRegion($region)
     {
@@ -242,7 +242,7 @@ class DistanceMatrixRequestBuilder extends AbstractBuilder
      *
      * @param string $language The language.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder The distance matrix request builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder The distance matrix request builder.
      */
     public function setLanguage($language)
     {
@@ -266,7 +266,7 @@ class DistanceMatrixRequestBuilder extends AbstractBuilder
      *
      * @param boolean $sensor TRUE if the sensor flag is enabled else FALSE.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder The distance matrix request builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder The distance matrix request builder.
      */
     public function setSensor($sensor)
     {
@@ -296,7 +296,7 @@ class DistanceMatrixRequestBuilder extends AbstractBuilder
     /**
      * {@inheritdoc}
      *
-     * @return \Ivory\GoogleMap\Services\DistanceMatrix\DistanceMatrixRequest The distance matrix request.
+     * @return \Fungio\GoogleMap\Services\DistanceMatrix\DistanceMatrixRequest The distance matrix request.
      */
     public function build()
     {

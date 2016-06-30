@@ -21,13 +21,13 @@ the value of type as follows:
 ### By configuration file
 
 By default, the bundle doesn't need any configuration. Most of the service have a default configuration which allows
-you to use the given objects like they are. The ``ivory_google_map.marker_shape`` service is. The configuration
+you to use the given objects like they are. The ``fungio_google_map.marker_shape`` service is. The configuration
 describes below is this default configuration.
 
 ```yaml
 # app/config/config.yml
 
-ivory_google_map:
+fungio_google_map:
     marker_shape:
         # Your own marker shape class
         class: "My\Fucking\MarkerShape"
@@ -52,11 +52,11 @@ ivory_google_map:
 ``` php
 <?php
 
-// Requests the ivory google map marker shape service
-$markerShape = $this->get('ivory_google_map.marker_shape');
+// Requests the fungio google map marker shape service
+$markerShape = $this->get('fungio_google_map.marker_shape');
 ```
 
 ### By coding
 
 If you want to learn more, you can read
-[this documentation](https://github.com/egeloen/ivory-google-map/blob/master/doc/usage/overlays/marker_shape.md).
+[this documentation](https://github.com/fungio/fungio-google-map/blob/master/doc/usage/overlays/marker_shape.md).

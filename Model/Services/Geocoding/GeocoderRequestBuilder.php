@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Services\Geocoding;
+namespace Fungio\GoogleMapBundle\Model\Services\Geocoding;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Fungio\GoogleMapBundle\Model\AbstractBuilder;
 
 /**
  * Geocoder request builder.
@@ -65,7 +65,7 @@ class GeocoderRequestBuilder extends AbstractBuilder
      *
      * @param string $address The address.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\Geocoding\GeocoderRequestBuilder The geocoder request bulder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\Geocoding\GeocoderRequestBuilder The geocoder request bulder.
      */
     public function setAddress($address)
     {
@@ -91,7 +91,7 @@ class GeocoderRequestBuilder extends AbstractBuilder
      * @param double  $longitude The longitude.
      * @param boolean $noWrap    The nor wrap flag.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\Geocoding\GeocoderRequestBuilder The geocoder request builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\Geocoding\GeocoderRequestBuilder The geocoder request builder.
      */
     public function setCoordinate($latitude, $longitude, $noWrap = true)
     {
@@ -120,7 +120,7 @@ class GeocoderRequestBuilder extends AbstractBuilder
      * @param boolean $southWestNoWrap    The south west no wrap flag.
      * @param boolean $northEastNoWrap    The north east no wrap flag.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\Geocoding\GeocoderRequestBuilder The geocoder request builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\Geocoding\GeocoderRequestBuilder The geocoder request builder.
      */
     public function setBound(
         $southWestLatitude,
@@ -157,7 +157,7 @@ class GeocoderRequestBuilder extends AbstractBuilder
      *
      * @param string $region The region.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\Geocoding\GeocoderRequestBuilder The geocoder request builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\Geocoding\GeocoderRequestBuilder The geocoder request builder.
      */
     public function setRegion($region)
     {
@@ -181,7 +181,7 @@ class GeocoderRequestBuilder extends AbstractBuilder
      *
      * @param string $language The language.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\Geocoding\GeocoderRequestBuilder The geocoder request builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\Geocoding\GeocoderRequestBuilder The geocoder request builder.
      */
     public function setLanguage($language)
     {
@@ -205,7 +205,7 @@ class GeocoderRequestBuilder extends AbstractBuilder
      *
      * @param boolean $sensor TRUE if the sensor flag is enabled else FALSE.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\Geocoding\GeocoderRequestBuilder The geocoder request builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\Geocoding\GeocoderRequestBuilder The geocoder request builder.
      */
     public function setSensor($sensor)
     {
@@ -232,7 +232,7 @@ class GeocoderRequestBuilder extends AbstractBuilder
     /**
      * {@inheritdoc}
      *
-     * @return \Ivory\GoogleMap\Services\Geocoding\GeocoderRequest The geocoder request.
+     * @return \Fungio\GoogleMap\Services\Geocoding\GeocoderRequest The geocoder request.
      */
     public function build()
     {

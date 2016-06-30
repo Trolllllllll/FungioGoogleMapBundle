@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map package.
+ * This file is part of the Fungio Google Map package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Layers;
+namespace Fungio\GoogleMapBundle\Tests\Fixtures\Model\Helper\Layers;
 
-use Ivory\GoogleMap\Helper\Layers\KMLLayerHelper as BaseKMLLayerHelper;
+use Fungio\GoogleMap\Helper\Layers\KMLLayerHelper as BaseKMLLayerHelper;
 
 /**
  * KML layer helper for testing.

@@ -1,4 +1,4 @@
-ivory_google_map:
+fungio_google_map:
     circle:
         prefix_javascript_variable: "c"
         center:

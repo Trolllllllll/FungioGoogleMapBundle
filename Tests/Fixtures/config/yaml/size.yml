@@ -1,4 +1,4 @@
-ivory_google_map:
+fungio_google_map:
     size:
         prefix_javascript_variable: "foo"
         width:                      100.1

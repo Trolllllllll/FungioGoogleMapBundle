@@ -8,13 +8,13 @@ image that you wish to place on a map, you can use a GroundOverlay object.
 ### By configuration file
 
 By default, the bundle doesn't need any configuration. Most of the service have a default configuration which allows
-you to use the given objects like they are. The ``ivory_google_map.ground_overlay`` service is. The configuration
+you to use the given objects like they are. The ``fungio_google_map.ground_overlay`` service is. The configuration
 describes below is this default configuration.
 
 ```yaml
 # app/config/config.yml
 
-ivory_google_map:
+fungio_google_map:
     ground_overlay:
         # Your own marker class
         class: "My\Fucking\GroundOverlay"
@@ -48,11 +48,11 @@ ivory_google_map:
 ``` php
 <?php
 
-// Requests the ivory google map ground overlay service
-$groundOverlay = $this->get('ivory_google_map.ground_overlay');
+// Requests the fungio google map ground overlay service
+$groundOverlay = $this->get('fungio_google_map.ground_overlay');
 ```
 
 ### By coding
 
 If you want to learn more, you can read
-[this documentation](https://github.com/egeloen/ivory-google-map/blob/master/doc/usage/overlays/ground_overlay.md).
+[this documentation](https://github.com/fungio/fungio-google-map/blob/master/doc/usage/overlays/ground_overlay.md).

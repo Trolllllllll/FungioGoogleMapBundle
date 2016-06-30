@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\DependencyInjection;
+namespace Fungio\GoogleMapBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -19,11 +19,11 @@ use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 /**
- * Ivory google map extension.
+ * Fungio google map extension.
  *
  * @author GeLo <geloen.eric@gmail.com>
  */
-class IvoryGoogleMapExtension extends Extension
+class FungioGoogleMapExtension extends Extension
 {
     /**
      * {@inheritdoc}
@@ -153,13 +153,13 @@ class IvoryGoogleMapExtension extends Extension
     {
         if (isset($config['api']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.api')
+                ->getDefinition('fungio_google_map.helper.api')
                 ->setClass($config['api']['helper_class']);
         }
 
         if (isset($config['api']['libraries'])) {
             $container
-                ->getDefinition('ivory_google_map.map.builder')
+                ->getDefinition('fungio_google_map.map.builder')
                 ->addMethodCall('setLibraries', array($config['api']['libraries']));
         }
     }
@@ -172,7 +172,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadMap(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.map.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.map.builder');
 
         if (isset($config['map']['class'])) {
             $builderDefinition->replaceArgument(0, $config['map']['class']);
@@ -180,7 +180,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['map']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.map')
+                ->getDefinition('fungio_google_map.helper.map')
                 ->setClass($config['map']['helper_class']);
         }
 
@@ -289,7 +289,7 @@ class IvoryGoogleMapExtension extends Extension
     {
         if (isset($config['map_type_id']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.map_type_id')
+                ->getDefinition('fungio_google_map.helper.map_type_id')
                 ->setClass($config['map_type_id']['helper_class']);
         }
     }
@@ -302,7 +302,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadCoordinate(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.coordinate.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.coordinate.builder');
 
         if (isset($config['coordinate']['class'])) {
             $builderDefinition->replaceArgument(0, $config['coordinate']['class']);
@@ -310,7 +310,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['coordinate']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.coordinate')
+                ->getDefinition('fungio_google_map.helper.coordinate')
                 ->setClass($config['coordinate']['helper_class']);
         }
 
@@ -342,7 +342,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadBound(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.bound.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.bound.builder');
 
         if (isset($config['bound']['class'])) {
             $builderDefinition->replaceArgument(0, $config['bound']['class']);
@@ -350,7 +350,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['bound']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.bound')
+                ->getDefinition('fungio_google_map.helper.bound')
                 ->setClass($config['bound']['helper_class']);
         }
 
@@ -396,7 +396,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadPoint(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.point.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.point.builder');
 
         if (isset($config['point']['class'])) {
             $builderDefinition->setArguments(array($config['point']['class']));
@@ -404,7 +404,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['point']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.point')
+                ->getDefinition('fungio_google_map.helper.point')
                 ->setClass($config['point']['helper_class']);
         }
 
@@ -432,7 +432,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadSize(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.size.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.size.builder');
 
         if (isset($config['size']['class'])) {
             $builderDefinition->setArguments(array($config['size']['class']));
@@ -440,7 +440,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['size']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.size')
+                ->getDefinition('fungio_google_map.helper.size')
                 ->setClass($config['size']['helper_class']);
         }
 
@@ -478,7 +478,7 @@ class IvoryGoogleMapExtension extends Extension
     {
         if (isset($config['control_position']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.control_position')
+                ->getDefinition('fungio_google_map.helper.control_position')
                 ->setClass($config['control_position']['helper_class']);
         }
     }
@@ -491,7 +491,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadMapTypeControl(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.map_type_control.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.map_type_control.builder');
 
         if (isset($config['map_type_control']['class'])) {
             $builderDefinition->setArguments(array($config['map_type_control']['class']));
@@ -499,7 +499,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['map_type_control']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.map_type_control')
+                ->getDefinition('fungio_google_map.helper.map_type_control')
                 ->setClass($config['map_type_control']['helper_class']);
         }
 
@@ -532,7 +532,7 @@ class IvoryGoogleMapExtension extends Extension
     {
         if (isset($config['map_type_control_style']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.map_type_control_style')
+                ->getDefinition('fungio_google_map.helper.map_type_control_style')
                 ->setClass($config['map_type_control_style']['helper_class']);
         }
     }
@@ -545,7 +545,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadOverviewMapControl(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.overview_map_control.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.overview_map_control.builder');
 
         if (isset($config['overview_map_control']['class'])) {
             $builderDefinition->setArguments(array($config['overview_map_control']['class']));
@@ -553,7 +553,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['overview_map_control']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.overview_map_control')
+                ->getDefinition('fungio_google_map.helper.overview_map_control')
                 ->setClass($config['overview_map_control']['helper_class']);
         }
 
@@ -570,7 +570,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadPanControl(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.pan_control.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.pan_control.builder');
 
         if (isset($config['pan_control']['class'])) {
             $builderDefinition->setArguments(array($config['pan_control']['class']));
@@ -578,7 +578,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['pan_control']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.pan_control')
+                ->getDefinition('fungio_google_map.helper.pan_control')
                 ->setClass($config['pan_control']['helper_class']);
         }
 
@@ -595,7 +595,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadRotateControl(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.rotate_control.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.rotate_control.builder');
 
         if (isset($config['rotate_control']['class'])) {
             $builderDefinition->setArguments(array($config['rotate_control']['class']));
@@ -603,7 +603,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['rotate_control']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.rotate_control')
+                ->getDefinition('fungio_google_map.helper.rotate_control')
                 ->setClass($config['rotate_control']['helper_class']);
         }
 
@@ -623,7 +623,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadScaleControl(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.scale_control.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.scale_control.builder');
 
         if (isset($config['scale_control']['class'])) {
             $builderDefinition->setArguments(array($config['scale_control']['class']));
@@ -631,7 +631,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['scale_control']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.scale_control')
+                ->getDefinition('fungio_google_map.helper.scale_control')
                 ->setClass($config['scale_control']['helper_class']);
         }
 
@@ -660,7 +660,7 @@ class IvoryGoogleMapExtension extends Extension
     {
         if (isset($config['scale_control_style']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.scale_control_style')
+                ->getDefinition('fungio_google_map.helper.scale_control_style')
                 ->setClass($config['scale_control_style']['helper_class']);
         }
     }
@@ -673,7 +673,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadStreetViewControl(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.street_view_control.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.street_view_control.builder');
 
         if (isset($config['street_view_control']['class'])) {
             $builderDefinition->setArguments(array($config['street_view_control']['class']));
@@ -681,7 +681,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['street_view_control']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.street_view_control')
+                ->getDefinition('fungio_google_map.helper.street_view_control')
                 ->setClass($config['street_view_control']['helper_class']);
         }
 
@@ -701,7 +701,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadZoomControl(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.zoom_control.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.zoom_control.builder');
 
         if (isset($config['zoom_control']['class'])) {
             $builderDefinition->setArguments(array($config['zoom_control']['class']));
@@ -709,7 +709,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['zoom_control']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.zoom_control')
+                ->getDefinition('fungio_google_map.helper.zoom_control')
                 ->setClass($config['zoom_control']['helper_class']);
         }
 
@@ -738,7 +738,7 @@ class IvoryGoogleMapExtension extends Extension
     {
         if (isset($config['zoom_control_style']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.zoom_control_style')
+                ->getDefinition('fungio_google_map.helper.zoom_control_style')
                 ->setClass($config['zoom_control_style']['helper_class']);
         }
     }
@@ -753,7 +753,7 @@ class IvoryGoogleMapExtension extends Extension
     {
         if (isset($config['animation']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.animation')
+                ->getDefinition('fungio_google_map.helper.animation')
                 ->setClass($config['animation']['helper_class']);
         }
     }
@@ -766,7 +766,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadMarkerCluster(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.marker_cluster.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.marker_cluster.builder');
 
         if (isset($config['marker_cluster']['class'])) {
             $builderDefinition->replaceArgument(0, $config['marker_cluster']['class']);
@@ -774,7 +774,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['marker_cluster']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.marker_cluster')
+                ->getDefinition('fungio_google_map.helper.marker_cluster')
                 ->setClass($config['marker_cluster']['helper_class']);
         }
 
@@ -802,7 +802,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadMarker(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.marker.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.marker.builder');
 
         if (isset($config['marker']['class'])) {
             $builderDefinition->replaceArgument(0, $config['marker']['class']);
@@ -810,7 +810,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['marker']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.marker')
+                ->getDefinition('fungio_google_map.helper.marker')
                 ->setClass($config['marker']['helper_class']);
         }
 
@@ -848,7 +848,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadMarkerImage(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.marker_image.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.marker_image.builder');
 
         if (isset($config['marker_image']['class'])) {
             $builderDefinition->replaceArgument(0, $config['marker_image']['class']);
@@ -856,7 +856,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['marker_image']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.marker_image')
+                ->getDefinition('fungio_google_map.helper.marker_image')
                 ->setClass($config['marker_image']['helper_class']);
         }
 
@@ -936,7 +936,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadMarkerShape(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.marker_shape.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.marker_shape.builder');
 
         if (isset($config['marker_shape']['class'])) {
             $builderDefinition->setArguments(array($config['marker_shape']['class']));
@@ -944,7 +944,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['marker_shape']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.marker_shape')
+                ->getDefinition('fungio_google_map.helper.marker_shape')
                 ->setClass($config['marker_shape']['helper_class']);
         }
 
@@ -972,7 +972,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadInfoWindow(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.info_window.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.info_window.builder');
 
         if (isset($config['info_window']['class'])) {
             $builderDefinition->replaceArgument(0, $config['info_window']['class']);
@@ -980,7 +980,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['info_window']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.info_window')
+                ->getDefinition('fungio_google_map.helper.info_window')
                 ->setClass($config['info_window']['helper_class']);
         }
 
@@ -1059,7 +1059,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadPolyline(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.polyline.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.polyline.builder');
 
         if (isset($config['polyline']['class'])) {
             $builderDefinition->setArguments(array($config['polyline']['class']));
@@ -1067,7 +1067,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['polyline']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.polyline')
+                ->getDefinition('fungio_google_map.helper.polyline')
                 ->setClass($config['polyline']['helper_class']);
         }
 
@@ -1091,7 +1091,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadEncodedPolyline(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.encoded_polyline.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.encoded_polyline.builder');
 
         if (isset($config['encoded_polyline']['class'])) {
             $builderDefinition->setArguments(array($config['encoded_polyline']['class']));
@@ -1099,7 +1099,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['encoded_polyline']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.encoded_polyline')
+                ->getDefinition('fungio_google_map.helper.encoded_polyline')
                 ->setClass($config['encoded_polyline']['helper_class']);
         }
 
@@ -1123,7 +1123,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadPolygon(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.polygon.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.polygon.builder');
 
         if (isset($config['polygon']['class'])) {
             $builderDefinition->setArguments(array($config['polygon']['class']));
@@ -1131,7 +1131,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['polygon']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.polygon')
+                ->getDefinition('fungio_google_map.helper.polygon')
                 ->setClass($config['polygon']['helper_class']);
         }
 
@@ -1155,7 +1155,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadRectangle(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.rectangle.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.rectangle.builder');
 
         if (isset($config['rectangle']['class'])) {
             $builderDefinition->replaceArgument(0, $config['rectangle']['class']);
@@ -1163,7 +1163,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['rectangle']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.rectangle')
+                ->getDefinition('fungio_google_map.helper.rectangle')
                 ->setClass($config['rectangle']['helper_class']);
         }
 
@@ -1212,7 +1212,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadCircle(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.circle.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.circle.builder');
 
         if (isset($config['circle']['class'])) {
             $builderDefinition->replaceArgument(0, $config['circle']['class']);
@@ -1220,7 +1220,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['circle']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.circle')
+                ->getDefinition('fungio_google_map.helper.circle')
                 ->setClass($config['circle']['helper_class']);
         }
 
@@ -1258,7 +1258,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadGroundOverlay(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.ground_overlay.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.ground_overlay.builder');
 
         if (isset($config['ground_overlay']['class'])) {
             $builderDefinition->replaceArgument(0, $config['ground_overlay']['class']);
@@ -1266,7 +1266,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['ground_overlay']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.ground_overlay')
+                ->getDefinition('fungio_google_map.helper.ground_overlay')
                 ->setClass($config['ground_overlay']['helper_class']);
         }
 
@@ -1319,7 +1319,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadKMLLayer(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.kml_layer.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.kml_layer.builder');
 
         if (isset($config['kml_layer']['class'])) {
             $builderDefinition->setArguments(array($config['kml_layer']['class']));
@@ -1327,7 +1327,7 @@ class IvoryGoogleMapExtension extends Extension
 
         if (isset($config['kml_layer']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.kml_layer')
+                ->getDefinition('fungio_google_map.helper.kml_layer')
                 ->setClass($config['kml_layer']['helper_class']);
         }
 
@@ -1357,13 +1357,13 @@ class IvoryGoogleMapExtension extends Extension
     {
         if (isset($config['event_manager']['class'])) {
             $container
-                ->getDefinition('ivory_google_map.event_manager.builder')
+                ->getDefinition('fungio_google_map.event_manager.builder')
                 ->setArguments(array($config['event_manager']['class']));
         }
 
         if (isset($config['event_manager']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.event_manager')
+                ->getDefinition('fungio_google_map.helper.event_manager')
                 ->setClass($config['event_manager']['helper_class']);
         }
     }
@@ -1376,7 +1376,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadEvent(array $config, ContainerBuilder $container)
     {
-        $builderDefinition = $container->getDefinition('ivory_google_map.event.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.event.builder');
 
         if (isset($config['event']['class'])) {
             $builderDefinition->setArguments(array($config['event']['class']));
@@ -1400,7 +1400,7 @@ class IvoryGoogleMapExtension extends Extension
     {
         if (isset($config['encoding']['helper_class'])) {
             $container
-                ->getDefinition('ivory_google_map.helper.encoding')
+                ->getDefinition('fungio_google_map.helper.encoding')
                 ->setClass($config['encoding']['helper_class']);
         }
     }
@@ -1414,7 +1414,7 @@ class IvoryGoogleMapExtension extends Extension
     protected function loadExtensions(array $config, ContainerBuilder $container)
     {
         if (!empty($config['extensions'])) {
-            $definition = $container->getDefinition('ivory_google_map.helper.map');
+            $definition = $container->getDefinition('fungio_google_map.helper.map');
 
             foreach ($config['extensions'] as $name => $service) {
                 $config['extensions'][$name] = new Reference($service);
@@ -1441,7 +1441,7 @@ class IvoryGoogleMapExtension extends Extension
 
             $container->setParameter(
                 'templating.helper.form.resources',
-                array_merge($phpFormResources, array('IvoryGoogleMapBundle:Form'))
+                array_merge($phpFormResources, array('FungioGoogleMapBundle:Form'))
             );
         }
 
@@ -1452,7 +1452,7 @@ class IvoryGoogleMapExtension extends Extension
 
             $container->setParameter(
                 'twig.form.resources',
-                array_merge($twigFormResources, array('IvoryGoogleMapBundle:Form:places_autocomplete_widget.html.twig'))
+                array_merge($twigFormResources, array('FungioGoogleMapBundle:Form:places_autocomplete_widget.html.twig'))
             );
         }
     }
@@ -1465,7 +1465,7 @@ class IvoryGoogleMapExtension extends Extension
      */
     protected function loadBusinessAccount(array $config, ContainerBuilder $container)
     {
-        $businessAccountDefinition = $container->getDefinition('ivory_google_map.business_account');
+        $businessAccountDefinition = $container->getDefinition('fungio_google_map.business_account');
 
         if (isset($config['business_account']['class'])) {
             $businessAccountDefinition->setClass($config['business_account']['class']);
@@ -1487,21 +1487,21 @@ class IvoryGoogleMapExtension extends Extension
             $definitions = array();
 
             if ($config['geocoder']['enabled']) {
-                $definitions[] = $container->getDefinition('ivory_google_map.geocoder.provider');
+                $definitions[] = $container->getDefinition('fungio_google_map.geocoder.provider');
             }
 
             if ($config['directions']['enabled']) {
-                $definitions[] = $container->getDefinition('ivory_google_map.directions');
+                $definitions[] = $container->getDefinition('fungio_google_map.directions');
             }
 
             if ($config['distance_matrix']['enabled']) {
-                $definitions[] = $container->getDefinition('ivory_google_map.distance_matrix');
+                $definitions[] = $container->getDefinition('fungio_google_map.distance_matrix');
             }
 
             foreach ($definitions as $definition) {
                 $definition->addMethodCall(
                     'setBusinessAccount',
-                    array(new Reference('ivory_google_map.business_account'))
+                    array(new Reference('fungio_google_map.business_account'))
                 );
             }
         }
@@ -1519,17 +1519,17 @@ class IvoryGoogleMapExtension extends Extension
             return;
         }
 
-        $providerDefinition = $container->getDefinition('ivory_google_map.geocoder.provider');
+        $providerDefinition = $container->getDefinition('fungio_google_map.geocoder.provider');
 
         if (isset($config['geocoder']['class'])) {
             $container
-                ->getDefinition('ivory_google_map.geocoder')
+                ->getDefinition('fungio_google_map.geocoder')
                 ->setClass($config['geocoder']['class']);
         }
 
         if (isset($config['geocoder']['adapter'])) {
             $container
-                ->getDefinition('ivory_google_map.geocoder.adapter')
+                ->getDefinition('fungio_google_map.geocoder.adapter')
                 ->setClass($config['geocoder']['adapter']);
         }
 
@@ -1556,7 +1556,7 @@ class IvoryGoogleMapExtension extends Extension
     {
         if (isset($config['geocoder']['fake_ip'])) {
             $fakeRequestDefinition = new Definition(
-                'Ivory\GoogleMapBundle\EventListener\FakeRequestListener',
+                'Fungio\GoogleMapBundle\EventListener\FakeRequestListener',
                 array($config['geocoder']['fake_ip'])
             );
 
@@ -1565,7 +1565,7 @@ class IvoryGoogleMapExtension extends Extension
                 array('event' => 'kernel.request', 'method' => 'onKernelRequest')
             );
 
-            $container->setDefinition('ivory_google_map.geocoder.event_listener.fake_request', $fakeRequestDefinition);
+            $container->setDefinition('fungio_google_map.geocoder.event_listener.fake_request', $fakeRequestDefinition);
         }
     }
 
@@ -1581,7 +1581,7 @@ class IvoryGoogleMapExtension extends Extension
             return;
         }
 
-        $builderDefinition = $container->getDefinition('ivory_google_map.geocoder_request.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.geocoder_request.builder');
 
         if (isset($config['geocoder_request']['class'])) {
             $builderDefinition->replaceArgument(0, $config['geocoder_request']['class']);
@@ -1655,7 +1655,7 @@ class IvoryGoogleMapExtension extends Extension
             return;
         }
 
-        $directionsDefinition = $container->getDefinition('ivory_google_map.directions');
+        $directionsDefinition = $container->getDefinition('fungio_google_map.directions');
 
         $directionsDefinition->addArgument(new Reference($config['directions']['adapter']));
 
@@ -1688,7 +1688,7 @@ class IvoryGoogleMapExtension extends Extension
             return;
         }
 
-        $builderDefinition = $container->getDefinition('ivory_google_map.directions_request.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.directions_request.builder');
 
         if (isset($config['directions_request']['class'])) {
             $builderDefinition->replaceArgument(0, $config['directions_request']['class']);
@@ -1752,7 +1752,7 @@ class IvoryGoogleMapExtension extends Extension
             return;
         }
 
-        $distanceMatrixDefinition = $container->getDefinition('ivory_google_map.distance_matrix');
+        $distanceMatrixDefinition = $container->getDefinition('fungio_google_map.distance_matrix');
 
         $distanceMatrixDefinition->addArgument(new Reference($config['distance_matrix']['adapter']));
 
@@ -1785,7 +1785,7 @@ class IvoryGoogleMapExtension extends Extension
             return;
         }
 
-        $builderDefinition = $container->getDefinition('ivory_google_map.distance_matrix_request.builder');
+        $builderDefinition = $container->getDefinition('fungio_google_map.distance_matrix_request.builder');
 
         if (isset($config['distance_matrix_request']['class'])) {
             $builderDefinition->replaceArgument(0, $config['distance_matrix_request']['class']);

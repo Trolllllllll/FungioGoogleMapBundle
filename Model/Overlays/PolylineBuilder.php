@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Overlays;
+namespace Fungio\GoogleMapBundle\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Fungio\GoogleMapBundle\Model\AbstractBuilder;
 
 /**
  * Polyline builder.
@@ -54,7 +54,7 @@ class PolylineBuilder extends AbstractBuilder
      *
      * @param string $prefixJavascriptVariable The prefix javascript variable.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\PolylineBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\PolylineBuilder The builder.
      */
     public function setPrefixJavascriptVariable($prefixJavascriptVariable)
     {
@@ -80,7 +80,7 @@ class PolylineBuilder extends AbstractBuilder
      * @param double  $longitude The longitude.
      * @param boolean $noWrap    The no wrap.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\PolylineBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\PolylineBuilder The builder.
      */
     public function addCoordinate($latitude, $longitude, $noWrap = true)
     {
@@ -104,7 +104,7 @@ class PolylineBuilder extends AbstractBuilder
      *
      * @param array $options The options.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\PolylineBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\PolylineBuilder The builder.
      */
     public function setOptions(array $options)
     {
@@ -128,7 +128,7 @@ class PolylineBuilder extends AbstractBuilder
     /**
      * {@inheritdoc}
      *
-     * @return \Ivory\GoogleMap\Overlays\Polyline The polyline.
+     * @return \Fungio\GoogleMap\Overlays\Polyline The polyline.
      */
     public function build()
     {

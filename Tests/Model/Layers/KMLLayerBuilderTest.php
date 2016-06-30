@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Layers;
+namespace Fungio\GoogleMapBundle\Tests\Model\Layers;
 
-use Ivory\GoogleMapBundle\Model\Layers\KMLLayerBuilder;
+use Fungio\GoogleMapBundle\Model\Layers\KMLLayerBuilder;
 
 /**
  * KML layer builder test.
@@ -20,7 +20,7 @@ use Ivory\GoogleMapBundle\Model\Layers\KMLLayerBuilder;
  */
 class KMLLayerBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Layers\KMLLayerBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Layers\KMLLayerBuilder */
     protected $kmlLayerBuilder;
 
     /**
@@ -28,7 +28,7 @@ class KMLLayerBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->kmlLayerBuilder = new KMLLayerBuilder('Ivory\GoogleMap\Layers\KMLLayer');
+        $this->kmlLayerBuilder = new KMLLayerBuilder('Fungio\GoogleMap\Layers\KMLLayer');
     }
 
     /**
@@ -41,7 +41,7 @@ class KMLLayerBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testInitialState()
     {
-        $this->assertSame('Ivory\GoogleMap\Layers\KMLLayer', $this->kmlLayerBuilder->getClass());
+        $this->assertSame('Fungio\GoogleMap\Layers\KMLLayer', $this->kmlLayerBuilder->getClass());
         $this->assertNull($this->kmlLayerBuilder->getPrefixJavascriptVariable());
         $this->assertNull($this->kmlLayerBuilder->getUrl());
         $this->assertEmpty($this->kmlLayerBuilder->getOptions());

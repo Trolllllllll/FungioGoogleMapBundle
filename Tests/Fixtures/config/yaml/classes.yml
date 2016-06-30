@@ -1,67 +1,67 @@
-ivory_google_map:
+fungio_google_map:
     map:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Map"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Map"
     coordinate:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Base\\Coordinate"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Base\\Coordinate"
     bound:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Base\\Bound"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Base\\Bound"
     point:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Base\\Point"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Base\\Point"
     size:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Base\\Size"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Base\\Size"
     map_type_control:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Controls\\MapTypeControl"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Controls\\MapTypeControl"
     overview_map_control:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Controls\\OverviewMapControl"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Controls\\OverviewMapControl"
     pan_control:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Controls\\PanControl"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Controls\\PanControl"
     rotate_control:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Controls\\RotateControl"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Controls\\RotateControl"
     scale_control:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Controls\\ScaleControl"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Controls\\ScaleControl"
     street_view_control:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Controls\\StreetViewControl"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Controls\\StreetViewControl"
     zoom_control:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Controls\\ZoomControl"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Controls\\ZoomControl"
     circle:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Overlays\\Circle"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Overlays\\Circle"
     encoded_polyline:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Overlays\\EncodedPolyline"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Overlays\\EncodedPolyline"
     ground_overlay:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Overlays\\GroundOverlay"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Overlays\\GroundOverlay"
     info_window:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Overlays\\InfoWindow"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Overlays\\InfoWindow"
     marker_cluster:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Overlays\\MarkerCluster"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Overlays\\MarkerCluster"
     marker:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Overlays\\Marker"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Overlays\\Marker"
     marker_image:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Overlays\\MarkerImage"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Overlays\\MarkerImage"
     marker_shape:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Overlays\\MarkerShape"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Overlays\\MarkerShape"
     polygon:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Overlays\\Polygon"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Overlays\\Polygon"
     polyline:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Overlays\\Polyline"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Overlays\\Polyline"
     rectangle:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Overlays\\Rectangle"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Overlays\\Rectangle"
     kml_layer:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Layers\\KMLLayer"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Layers\\KMLLayer"
     event_manager:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Events\\EventManager"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Events\\EventManager"
     event:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Events\\Event"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Events\\Event"
     business_account:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Services\\BusinessAccount"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Services\\BusinessAccount"
     geocoder:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Services\\Geocoding\\Geocoder"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Services\\Geocoding\\Geocoder"
     geocoder_request:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Services\\Geocoding\\GeocoderRequest"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Services\\Geocoding\\GeocoderRequest"
     directions:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Services\\Directions\\Directions"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Services\\Directions\\Directions"
     directions_request:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Services\\Directions\\DirectionsRequest"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Services\\Directions\\DirectionsRequest"
     distance_matrix:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Services\\DistanceMatrix\\DistanceMatrix"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Services\\DistanceMatrix\\DistanceMatrix"
     distance_matrix_request:
-        class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Services\\DistanceMatrix\\DistanceMatrixRequest"
+        class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Services\\DistanceMatrix\\DistanceMatrixRequest"

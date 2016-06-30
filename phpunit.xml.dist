@@ -2,7 +2,7 @@
 
 <phpunit colors="true" bootstrap="./Tests/bootstrap.php">
     <testsuites>
-        <testsuite name="IvoryGoogleMapBundle Test Suite">
+        <testsuite name="FungioGoogleMapBundle Test Suite">
             <directory suffix="Test.php">./Tests</directory>
         </testsuite>
     </testsuites>

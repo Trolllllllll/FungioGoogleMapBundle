@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\EventListener;
+namespace Fungio\GoogleMapBundle\Tests\EventListener;
 
-use Ivory\GoogleMapBundle\EventListener\FakeRequestListener;
+use Fungio\GoogleMapBundle\EventListener\FakeRequestListener;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 /**
@@ -21,7 +21,7 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
  */
 class FakeRequestListenerTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\EventListener\FakeRequestListener */
+    /** @var \Fungio\GoogleMapBundle\EventListener\FakeRequestListener */
     protected $fakeRequestListener;
 
     /** @var \Symfony\Component\HttpKernel\Event\GetResponseEvent */

@@ -14,13 +14,13 @@ used in V2 of the API, though much has changed under the hood. There are two typ
 ### By configuration file
 
 By default, the bundle doesn't need any configuration. Most of the service have a default configuration which allows
-you to use the given objects like they are. The ``ivory_google_map.event`` service is. The configuration describes
+you to use the given objects like they are. The ``fungio_google_map.event`` service is. The configuration describes
 below is this default configuration.
 
 ```yaml
 # app/config/config.yml
 
-ivory_google_map:
+fungio_google_map:
     event:
         # You own event class
         class: "My\Fucking\Event"
@@ -42,8 +42,8 @@ ivory_google_map:
 ``` php
 <?php
 
-// Requests the ivory google map event service
-$event = $this->get('ivory_google_map.event');
+// Requests the fungio google map event service
+$event = $this->get('fungio_google_map.event');
 ```
 
 The configuration file allows you to manage the generated javascript variable.
@@ -52,4 +52,4 @@ All the other configuration can only be done by coding.
 ### By coding
 
 If you want to learn more, you can read
-[this documentation](https://github.com/egeloen/ivory-google-map/blob/master/doc/usage/events.md).
+[this documentation](https://github.com/fungio/fungio-google-map/blob/master/doc/usage/events.md).

@@ -11,27 +11,27 @@ addresses). This process is known as "reverse geocoding".
 ## Request a geocoder
 
 By default, the bundle doesn't need any configuration. Most of the service have a default configuration which allows
-you to use the given objects like they are. The ``ivory_google_map.geocoder`` service is not one of them. The
+you to use the given objects like they are. The ``fungio_google_map.geocoder`` service is not one of them. The
 configuration describes below is this default configuration but if you don't provide at least one value (for the
 `geocoder` or `geocoder_request` nodes), the service will not be registered.
 
 ```yaml
 # app/config/config.yml
 
-ivory_google_map:
+fungio_google_map:
     geocoder:
         # Enable the service
         enabled: true
 
         # Geocoder class
-        class: "Ivory\GoogleMap\Services\Geocoding\Geocoder"
+        class: "Fungio\GoogleMap\Services\Geocoding\Geocoder"
         provider:
             # Fake IP
             # If you set a fake IP, the parameter will replace the REMOTE_ADDR value by the given one
             fake_ip: "123.345.567.123"
 
             # Provider class
-            class: "Ivory\GoogleMap\Services\Geocoding\GeocoderProvider"
+            class: "Fungio\GoogleMap\Services\Geocoding\GeocoderProvider"
 
             # API key used by the provider
             # If you set an API key, this paremeter will be the second parameter provider constructor
@@ -48,19 +48,19 @@ ivory_google_map:
 ```
 
 ``` php
-$geocoder = $this->get('ivory_google_map.geocoder');
+$geocoder = $this->get('fungio_google_map.geocoder');
 ```
 
 If you want to learn more, you can read this
-[documentation](http://github.com/egeloen/ivory-google-map/blob/master/doc/usage/services/geocoding/geocoder.md).
+[documentation](http://github.com/fungio/fungio-google-map/blob/master/doc/usage/services/geocoding/geocoder.md).
 
 ## The standard Geocoder
 
 If you use the standard Geocoder components, I recommand you to directly read this own documentation available
 [here](http://www.geocoder-php.org/).
 
-## The Ivory Google Map Geocoder
+## The Fungio Google Map Geocoder
 
-The specific Ivory Google Map Geocoder has been added to allow you to geocode a very advanced request & use the
+The specific Fungio Google Map Geocoder has been added to allow you to geocode a very advanced request & use the
 response to directly build your overlays. If you are interrested about this geocoder, the documentation is available
-[here](http://github.com/egeloen/IvoryGoogleMapBundle/blob/master/Resources/doc/usage/services/geocoding/ivory_geocoder.md).
+[here](http://github.com/fungio/FungioGoogleMapBundle/blob/master/Resources/doc/usage/services/geocoding/fungio_geocoder.md).

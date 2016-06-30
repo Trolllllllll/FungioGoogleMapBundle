@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Base;
+namespace Fungio\GoogleMapBundle\Tests\Model\Base;
 
-use Ivory\GoogleMapBundle\Model\Base\PointBuilder;
+use Fungio\GoogleMapBundle\Model\Base\PointBuilder;
 
 /**
  * Point builder test.
@@ -20,7 +20,7 @@ use Ivory\GoogleMapBundle\Model\Base\PointBuilder;
  */
 class PointBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Base\PointBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Base\PointBuilder */
     protected $pointBuilder;
 
     /**
@@ -28,7 +28,7 @@ class PointBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->pointBuilder = new PointBuilder('Ivory\GoogleMap\Base\Point');
+        $this->pointBuilder = new PointBuilder('Fungio\GoogleMap\Base\Point');
     }
 
     /**
@@ -41,7 +41,7 @@ class PointBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testInitialState()
     {
-        $this->assertSame('Ivory\GoogleMap\Base\Point', $this->pointBuilder->getClass());
+        $this->assertSame('Fungio\GoogleMap\Base\Point', $this->pointBuilder->getClass());
         $this->assertNull($this->pointBuilder->getPrefixJavascriptVariable());
         $this->assertNull($this->pointBuilder->getX());
         $this->assertNull($this->pointBuilder->getY());

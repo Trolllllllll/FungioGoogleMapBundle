@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Overlays;
+namespace Fungio\GoogleMapBundle\Tests\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\Base\PointBuilder;
-use Ivory\GoogleMapBundle\Model\Base\SizeBuilder;
-use Ivory\GoogleMapBundle\Model\Overlays\MarkerImageBuilder;
+use Fungio\GoogleMapBundle\Model\Base\PointBuilder;
+use Fungio\GoogleMapBundle\Model\Base\SizeBuilder;
+use Fungio\GoogleMapBundle\Model\Overlays\MarkerImageBuilder;
 
 /**
  * Marker image builder test.
@@ -22,13 +22,13 @@ use Ivory\GoogleMapBundle\Model\Overlays\MarkerImageBuilder;
  */
 class MarkerImageBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Overlays\MarkerImageBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Overlays\MarkerImageBuilder */
     protected $markerImageBuilder;
 
-    /** @var \Ivory\GoogleMapBundle\Model\Base\PointBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Base\PointBuilder */
     protected $pointBuilder;
 
-    /** @var \Ivory\GoogleMapBundle\Model\Base\SizeBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Base\SizeBuilder */
     protected $sizeBuilder;
 
     /**
@@ -36,11 +36,11 @@ class MarkerImageBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->pointBuilder = new PointBuilder('Ivory\GoogleMap\Base\Point');
-        $this->sizeBuilder = new SizeBuilder('Ivory\GoogleMap\Base\Size');
+        $this->pointBuilder = new PointBuilder('Fungio\GoogleMap\Base\Point');
+        $this->sizeBuilder = new SizeBuilder('Fungio\GoogleMap\Base\Size');
 
         $this->markerImageBuilder = new MarkerImageBuilder(
-            'Ivory\GoogleMap\Overlays\MarkerImage',
+            'Fungio\GoogleMap\Overlays\MarkerImage',
             $this->pointBuilder,
             $this->sizeBuilder
         );
@@ -58,7 +58,7 @@ class MarkerImageBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testInitiasState()
     {
-        $this->assertSame('Ivory\GoogleMap\Overlays\MarkerImage', $this->markerImageBuilder->getClass());
+        $this->assertSame('Fungio\GoogleMap\Overlays\MarkerImage', $this->markerImageBuilder->getClass());
         $this->assertSame($this->pointBuilder, $this->markerImageBuilder->getPointBuilder());
         $this->assertSame($this->sizeBuilder, $this->markerImageBuilder->getSizeBuilder());
         $this->assertNull($this->markerImageBuilder->getPrefixJavascriptVariable());

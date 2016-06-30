@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Overlays;
+namespace Fungio\GoogleMapBundle\Tests\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\Overlays\PolylineBuilder;
+use Fungio\GoogleMapBundle\Model\Overlays\PolylineBuilder;
 
 /**
  * Polyline builder test.
@@ -20,7 +20,7 @@ use Ivory\GoogleMapBundle\Model\Overlays\PolylineBuilder;
  */
 class PolylineBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Overlays\PolylineBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Overlays\PolylineBuilder */
     protected $polylineBuilder;
 
     /**
@@ -28,7 +28,7 @@ class PolylineBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->polylineBuilder = new PolylineBuilder('Ivory\GoogleMap\Overlays\Polyline');
+        $this->polylineBuilder = new PolylineBuilder('Fungio\GoogleMap\Overlays\Polyline');
     }
 
     /**
@@ -41,7 +41,7 @@ class PolylineBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testInitialState()
     {
-        $this->assertSame('Ivory\GoogleMap\Overlays\Polyline', $this->polylineBuilder->getClass());
+        $this->assertSame('Fungio\GoogleMap\Overlays\Polyline', $this->polylineBuilder->getClass());
         $this->assertNull($this->polylineBuilder->getPrefixJavascriptVariable());
         $this->assertEmpty($this->polylineBuilder->getCoordinates());
         $this->assertEmpty($this->polylineBuilder->getOptions());

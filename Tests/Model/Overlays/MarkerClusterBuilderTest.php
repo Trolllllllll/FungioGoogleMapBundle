@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Overlays;
+namespace Fungio\GoogleMapBundle\Tests\Model\Overlays;
 
-use Ivory\GoogleMap\Overlays\MarkerCluster;
-use Ivory\GoogleMapBundle\Model\Overlays\MarkerClusterBuilder;
+use Fungio\GoogleMap\Overlays\MarkerCluster;
+use Fungio\GoogleMapBundle\Model\Overlays\MarkerClusterBuilder;
 
 /**
  * Marker cluster builder test.
@@ -21,7 +21,7 @@ use Ivory\GoogleMapBundle\Model\Overlays\MarkerClusterBuilder;
  */
 class MarkerClusterBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Overlays\MarkerClusterBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Overlays\MarkerClusterBuilder */
     protected $markerClusterBuilder;
 
     /**
@@ -29,7 +29,7 @@ class MarkerClusterBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->markerClusterBuilder = new MarkerClusterBuilder('Ivory\GoogleMap\Overlays\MarkerCluster');
+        $this->markerClusterBuilder = new MarkerClusterBuilder('Fungio\GoogleMap\Overlays\MarkerCluster');
     }
 
     /**
@@ -60,7 +60,7 @@ class MarkerClusterBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testSingleBuildWithValues()
     {
-        $marker = $this->getMock('Ivory\GoogleMap\Overlays\Marker');
+        $marker = $this->getMock('Fungio\GoogleMap\Overlays\Marker');
 
         $this->markerClusterBuilder
             ->setPrefixJavascriptVariable('foo')
@@ -83,7 +83,7 @@ class MarkerClusterBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testMultipleBuildWithoutReset()
     {
-        $marker = $this->getMock('Ivory\GoogleMap\Overlays\Marker');
+        $marker = $this->getMock('Fungio\GoogleMap\Overlays\Marker');
 
         $this->markerClusterBuilder
             ->setPrefixJavascriptVariable('foo')
@@ -109,7 +109,7 @@ class MarkerClusterBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testMultipleBuildWithReset()
     {
-        $marker = $this->getMock('Ivory\GoogleMap\Overlays\Marker');
+        $marker = $this->getMock('Fungio\GoogleMap\Overlays\Marker');
 
         $this->markerClusterBuilder
             ->setPrefixJavascriptVariable('foo')

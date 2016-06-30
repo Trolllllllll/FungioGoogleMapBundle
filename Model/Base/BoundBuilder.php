@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Base;
+namespace Fungio\GoogleMapBundle\Model\Base;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Fungio\GoogleMapBundle\Model\AbstractBuilder;
 
 /**
  * Bound builder.
@@ -20,7 +20,7 @@ use Ivory\GoogleMapBundle\Model\AbstractBuilder;
  */
 class BoundBuilder extends AbstractBuilder
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder */
     protected $coordinateBuilder;
 
     /** @var string */
@@ -36,7 +36,7 @@ class BoundBuilder extends AbstractBuilder
      * Creates a bound builder.
      *
      * @param string                                              $class             The bound class.
-     * @param \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder $coordinateBuilder The coordinate builder.
+     * @param \Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder $coordinateBuilder The coordinate builder.
      */
     public function __construct($class, CoordinateBuilder $coordinateBuilder)
     {
@@ -49,7 +49,7 @@ class BoundBuilder extends AbstractBuilder
     /**
      * Gets the coordinate builder.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder The coordinate builder.
+     * @return \Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder The coordinate builder.
      */
     public function getCoordinateBuilder()
     {
@@ -59,9 +59,9 @@ class BoundBuilder extends AbstractBuilder
     /**
      * Sets the coordinate builder.
      *
-     * @param \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder $coordinateBuilder The coordinate builder.
+     * @param \Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder $coordinateBuilder The coordinate builder.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\BoundBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Base\BoundBuilder The builder.
      */
     public function setCoordinateBuilder(CoordinateBuilder $coordinateBuilder)
     {
@@ -85,7 +85,7 @@ class BoundBuilder extends AbstractBuilder
      *
      * @param string $prefixJavascriptVariable The prefix javascript variable.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\BoundBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Base\BoundBuilder The builder.
      */
     public function setPrefixJavascriptVariable($prefixJavascriptVariable)
     {
@@ -97,7 +97,7 @@ class BoundBuilder extends AbstractBuilder
     /**
      * Gets the bound south west.
      *
-     * @return \Ivory\GoogleMap\Base\Coordinate The bound south west.
+     * @return \Fungio\GoogleMap\Base\Coordinate The bound south west.
      */
     public function getSouthWest()
     {
@@ -111,7 +111,7 @@ class BoundBuilder extends AbstractBuilder
      * @param double  $longitude The longitude.
      * @param boolean $noWrap    The no wrap.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\BoundBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Base\BoundBuilder The builder.
      */
     public function setSouthWest($latitude, $longitude, $noWrap = true)
     {
@@ -123,7 +123,7 @@ class BoundBuilder extends AbstractBuilder
     /**
      * Gets the bound north east.
      *
-     * @return \Ivory\GoogleMap\Base\Coordinate The bound north east.
+     * @return \Fungio\GoogleMap\Base\Coordinate The bound north east.
      */
     public function getNorthEast()
     {
@@ -133,7 +133,7 @@ class BoundBuilder extends AbstractBuilder
     /**
      * Sets the bound north east.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\BoundBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Base\BoundBuilder The builder.
      */
     public function setNorthEast($latitude, $longitude, $noWrap = true)
     {
@@ -159,7 +159,7 @@ class BoundBuilder extends AbstractBuilder
     /**
      * {@inheritdoc}
      *
-     * @return \Ivory\GoogleMap\Base\Bound The bound.
+     * @return \Fungio\GoogleMap\Base\Bound The bound.
      */
     public function build()
     {

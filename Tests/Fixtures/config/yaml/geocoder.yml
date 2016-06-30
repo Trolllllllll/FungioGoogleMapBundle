@@ -1,4 +1,4 @@
-ivory_google_map:
+fungio_google_map:
     geocoder:
         fake_ip: "123.345.567.123"
         class:   "Geocoder\\Geocoder"

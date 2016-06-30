@@ -5,14 +5,14 @@
 ### By configuration file
 
 By default, the bundle doesn't need any configuration. Most of the service have a default configuration which allows
-you to use the given objects like they are. The ``ivory_google_map.directions_request`` service is not. The
+you to use the given objects like they are. The ``fungio_google_map.directions_request`` service is not. The
 configuration describes below is this default configuration but if you don't provide at least one value (for the
 `directions` or `directions_request` nodes), the service will not be registered.
 
 ```yaml
 # app/config/config.yml
 
-ivory_google_map:
+fungio_google_map:
     directions_request:
         # Your own directions request class
         class: "My\Fucking\DirectionsRequest"
@@ -58,11 +58,11 @@ ivory_google_map:
 <?php
 
 /**
- * Requests & configure the ivory google map directions request service
+ * Requests & configure the fungio google map directions request service
  *
- * @var Ivory\GoogleMap\Services\Directions\DirectionsRequest $request
+ * @var Fungio\GoogleMap\Services\Directions\DirectionsRequest $request
  */
-$request = $this->get('ivory_google_map.directions_request');
+$request = $this->get('fungio_google_map.directions_request');
 ```
 
 ### By coding
@@ -71,11 +71,11 @@ $request = $this->get('ivory_google_map.directions_request');
 <?php
 
 /**
- * Requests & configure the ivory google map directions request service
+ * Requests & configure the fungio google map directions request service
  *
- * @var Ivory\GoogleMap\Services\Directions\DirectionsRequest $request
+ * @var Fungio\GoogleMap\Services\Directions\DirectionsRequest $request
  */
-$request = $this->get('ivory_google_map.directions_request');
+$request = $this->get('fungio_google_map.directions_request');
 
 // Set your origin
 $request->setOrigin('New York')
@@ -106,7 +106,7 @@ $request->setSensor(false);
 ## Route your request
 
 ``` php
-use Ivory\GoogleMap\Services\Directions\DirectionsRequest;
+use Fungio\GoogleMap\Services\Directions\DirectionsRequest;
 
 $request = new DirectionsRequest();
 

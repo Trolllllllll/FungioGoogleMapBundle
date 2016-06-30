@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Base;
+namespace Fungio\GoogleMapBundle\Model\Base;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Fungio\GoogleMapBundle\Model\AbstractBuilder;
 
 /**
  * Coordinate builder.
@@ -47,7 +47,7 @@ class CoordinateBuilder extends AbstractBuilder
      *
      * @param string $prefixJavascriptVariable The prefix javascript variable.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder The builder.
      */
     public function setPrefixJavascriptVariable($prefixJavascriptVariable)
     {
@@ -71,7 +71,7 @@ class CoordinateBuilder extends AbstractBuilder
      *
      * @param double $latitude The coordinate latitude.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder The builder.
      */
     public function setLatitude($latitude)
     {
@@ -95,7 +95,7 @@ class CoordinateBuilder extends AbstractBuilder
      *
      * @param double $longitude The coordinate longitude.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder The builder.
      */
     public function setLongitude($longitude)
     {
@@ -119,7 +119,7 @@ class CoordinateBuilder extends AbstractBuilder
      *
      * @param boolean $noWrap TRUE if the coordinate has no wrap else FALSE.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder The builder.
      */
     public function setNoWrap($noWrap)
     {
@@ -144,7 +144,7 @@ class CoordinateBuilder extends AbstractBuilder
     /**
      * {@inheritdoc}
      *
-     * @return \Ivory\GoogleMap\Base\Coordinate The coordinate.
+     * @return \Fungio\GoogleMap\Base\Coordinate The coordinate.
      */
     public function build()
     {

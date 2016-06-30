@@ -8,13 +8,13 @@ appears by default in the top left corner of the map.
 ### By configuration file
 
 By default, the bundle doesn't need any configuration. Most of the service have a default configuration which allows
-you to use the given objects like they are. The ``ivory_google_map.street_view_control`` service is. The configuration
+you to use the given objects like they are. The ``fungio_google_map.street_view_control`` service is. The configuration
 describes below is this default configuration.
 
 ```yaml
 # app/config/config.yml
 
-ivory_google_map:
+fungio_google_map:
     street_view_control:
         # You own street view control class
         class: "My\Fucking\StreetViewControl"
@@ -34,11 +34,11 @@ ivory_google_map:
 ``` php
 <?php
 
-// Requests the ivory google map street view control service
-$streetViewControl = $this->get('ivory_google_map.street_view_control');
+// Requests the fungio google map street view control service
+$streetViewControl = $this->get('fungio_google_map.street_view_control');
 ```
 
 ### By coding
 
 If you wan to learn more, you can read
-[this documentation](https://github.com/egeloen/ivory-google-map/blob/master/doc/usage/controls/street_view.md).
+[this documentation](https://github.com/fungio/fungio-google-map/blob/master/doc/usage/controls/street_view.md).

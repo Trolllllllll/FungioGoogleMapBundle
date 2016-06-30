@@ -5,12 +5,12 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd"
 >
     <parameters>
-        <parameter key="ivory_google_map.twig.extension.class">Ivory\GoogleMapBundle\Twig\GoogleMapExtension</parameter>
+        <parameter key="fungio_google_map.twig.extension.class">Fungio\GoogleMapBundle\Twig\GoogleMapExtension</parameter>
     </parameters>
 
     <services>
-        <service id="ivory_google_map.twig.extension" class="%ivory_google_map.twig.extension.class%" public="false">
-            <argument type="service" id="ivory_google_map.template.helper" />
+        <service id="fungio_google_map.twig.extension" class="%fungio_google_map.twig.extension.class%" public="false">
+            <argument type="service" id="fungio_google_map.template.helper" />
             <tag name="twig.extension" />
         </service>
     </services>

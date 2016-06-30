@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Overlays;
+namespace Fungio\GoogleMapBundle\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Fungio\GoogleMapBundle\Model\AbstractBuilder;
 
 /**
  * Encoded polyline builder.
@@ -54,7 +54,7 @@ class EncodedPolylineBuilder extends AbstractBuilder
      *
      * @param string $prefixJavascriptVariable The prefix javascript variable.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\EncodedPolylineBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\EncodedPolylineBuilder The builder.
      */
     public function setPrefixJavascriptVariable($prefixJavascriptVariable)
     {
@@ -78,7 +78,7 @@ class EncodedPolylineBuilder extends AbstractBuilder
      *
      * @param string $value The value.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\EncodedPolylineBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\EncodedPolylineBuilder The builder.
      */
     public function setValue($value)
     {
@@ -102,7 +102,7 @@ class EncodedPolylineBuilder extends AbstractBuilder
      * The builder.
      * @param array $options The options.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\EncodedPolylineBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\EncodedPolylineBuilder The builder.
      */
     public function setOptions(array $options)
     {
@@ -126,7 +126,7 @@ class EncodedPolylineBuilder extends AbstractBuilder
     /**
      * {@inheritdoc}
      *
-     * @return \Ivory\GoogleMap\Overlays\EncodedPolyline The encoded polyline.
+     * @return \Fungio\GoogleMap\Overlays\EncodedPolyline The encoded polyline.
      */
     public function build()
     {

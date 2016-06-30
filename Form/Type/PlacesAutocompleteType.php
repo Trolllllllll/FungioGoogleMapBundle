@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,25 +9,27 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Form\Type;
+namespace Fungio\GoogleMapBundle\Form\Type;
 
-use Ivory\GoogleMap\Helper\Places\AutocompleteHelper;
-use Ivory\GoogleMap\Places\Autocomplete;
+use Fungio\GoogleMap\Helper\Places\AutocompleteHelper;
+use Fungio\GoogleMap\Places\Autocomplete;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\Form\FormView;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
  * Google Map places autocomplete type.
  *
  * @author GeLo <geloen.eric@gmail.com>
+ * @author Pierrick AUBIN <pierrick.aubin@siqual.fr>
  */
 class PlacesAutocompleteType extends AbstractType
 {
-    /** @var \Ivory\GoogleMap\Helper\Places\AutocompleteHelper */
+    /** @var \Fungio\GoogleMap\Helper\Places\AutocompleteHelper */
     protected $autocompleteHelper;
 
     /** @var \Symfony\Component\HttpFoundation\Request */
@@ -36,19 +38,19 @@ class PlacesAutocompleteType extends AbstractType
     /**
      * Creates a places autocomplete form type.
      *
-     * @param \Ivory\GoogleMap\Helper\Places\AutocompleteHelper $autocompleteHelper The autocomplete helper.
-     * @param \Ivory\GoogleMapBundle\Form\Type\Request          $request            The http request.
+     * @param AutocompleteHelper $autocompleteHelper
+     * @param RequestStack $requestStack
      */
-    public function __construct(AutocompleteHelper $autocompleteHelper, Request $request)
+    public function __construct(AutocompleteHelper $autocompleteHelper, RequestStack $requestStack)
     {
         $this->setAutocompleteHelper($autocompleteHelper);
-        $this->setRequest($request);
+        $this->setRequest($requestStack->getCurrentRequest());
     }
 
     /**
      * Gets the autocomplete helper.
      *
-     * @return \Ivory\GoogleMap\Helper\Places\AutocompleteHelper The autocomplete helper.
+     * @return \Fungio\GoogleMap\Helper\Places\AutocompleteHelper The autocomplete helper.
      */
     public function getAutocompleteHelper()
     {
@@ -58,7 +60,7 @@ class PlacesAutocompleteType extends AbstractType
     /**
      * Sets the autocomplete helper.
      *
-     * @param \Ivory\GoogleMap\Helper\Places\AutocompleteHelper $autocompleteHelper The autocomplete helper.
+     * @param \Fungio\GoogleMap\Helper\Places\AutocompleteHelper $autocompleteHelper The autocomplete helper.
      */
     public function setAutocompleteHelper(AutocompleteHelper $autocompleteHelper)
     {
@@ -141,7 +143,7 @@ class PlacesAutocompleteType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    public function defaultOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
             'prefix'                 => null,
@@ -154,7 +156,7 @@ class PlacesAutocompleteType extends AbstractType
 
         $resolver->setAllowedTypes(array(
             'prefix'                 => array('string', 'null'),
-            'bound'                  => array('Ivory\GoogleMap\Base\Bound', 'array', 'null'),
+            'bound'                  => array('Fungio\GoogleMap\Base\Bound', 'array', 'null'),
             'types'                  => array('array'),
             'component_restrictions' => array('array'),
             'async'                  => array('bool'),

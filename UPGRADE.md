@@ -9,7 +9,7 @@ If you don't provide at least one configuration value (regardless the configurat
 explicitely enable it in your configuration file:
 
 ``` yaml
-ivory_google_map:
+fungio_google_map:
     geocoder:
         enabled: true
     directions:
@@ -26,7 +26,7 @@ If you're using Services & Symfony >= 2.1, you need to update your `composer.jso
 ``` json
 {
     "require": {
-        "egeloen/google-map-bundle": "*",
+        "fungio/google-map-bundle": "*",
         "widop/http-adapter-bundle": "1.1.*"
     }
 }
@@ -56,8 +56,8 @@ $loader->registerNamespaces(array(
 
 ### 1.1.0 to 1.1.1
 
- * The event helper service (`ivory_google_map.helper.event`) & configuration parameter
-   (`ivory_google_map.event.helper_class`) has been removed.
+ * The event helper service (`fungio_google_map.helper.event`) & configuration parameter
+   (`fungio_google_map.event.helper_class`) has been removed.
 
 ### 1.0.0 to 1.1.0
 
@@ -65,8 +65,8 @@ The business classes have been moved to a dedicated library for reuasibility pur
 you need to update your `deps` file:
 
 ```
-[ivory-google-map]
-    git=http://github.com/egeloen/ivory-google-map.git
+[fungio-google-map]
+    git=http://github.com/fungio/fungio-google-map.git
 ```
 
 Autoload the library:
@@ -75,7 +75,7 @@ Autoload the library:
 // app/autoload.php
 
 $loader->registerNamespaces(array(
-    'Ivory\\GoogleMap' => __DIR__.'/../vendor/ivory-google-map/src',
+    'Fungio\\GoogleMap' => __DIR__.'/../vendor/fungio-google-map/src',
     // ...
 );
 ```

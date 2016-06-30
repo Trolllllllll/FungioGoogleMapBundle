@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map package.
+ * This file is part of the Fungio Google Map package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Fixtures\Model\Controls;
+namespace Fungio\GoogleMapBundle\Tests\Fixtures\Model\Controls;
 
-use Ivory\GoogleMap\Controls\OverviewMapControl as BaseOverviewMapControl;
+use Fungio\GoogleMap\Controls\OverviewMapControl as BaseOverviewMapControl;
 
 /**
  * An overview map control for testing.

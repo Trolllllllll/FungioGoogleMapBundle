@@ -5,85 +5,85 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd"
 >
     <parameters>
-        <parameter key="ivory_google_map.coordinate.class">Ivory\GoogleMap\Base\Coordinate</parameter>
-        <parameter key="ivory_google_map.coordinate.builder.class">Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder</parameter>
-        <parameter key="ivory_google_map.coordinate.helper.class">Ivory\GoogleMap\Helper\Base\CoordinateHelper</parameter>
+        <parameter key="fungio_google_map.coordinate.class">Fungio\GoogleMap\Base\Coordinate</parameter>
+        <parameter key="fungio_google_map.coordinate.builder.class">Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder</parameter>
+        <parameter key="fungio_google_map.coordinate.helper.class">Fungio\GoogleMap\Helper\Base\CoordinateHelper</parameter>
 
-        <parameter key="ivory_google_map.bound.class">Ivory\GoogleMap\Base\Bound</parameter>
-        <parameter key="ivory_google_map.bound.builder.class">Ivory\GoogleMapBundle\Model\Base\BoundBuilder</parameter>
-        <parameter key="ivory_google_map.bound.helper.class">Ivory\GoogleMap\Helper\Base\BoundHelper</parameter>
+        <parameter key="fungio_google_map.bound.class">Fungio\GoogleMap\Base\Bound</parameter>
+        <parameter key="fungio_google_map.bound.builder.class">Fungio\GoogleMapBundle\Model\Base\BoundBuilder</parameter>
+        <parameter key="fungio_google_map.bound.helper.class">Fungio\GoogleMap\Helper\Base\BoundHelper</parameter>
 
-        <parameter key="ivory_google_map.point.class">Ivory\GoogleMap\Base\Point</parameter>
-        <parameter key="ivory_google_map.point.builder.class">Ivory\GoogleMapBundle\Model\Base\PointBuilder</parameter>
-        <parameter key="ivory_google_map.point.helper.class">Ivory\GoogleMap\Helper\Base\PointHelper</parameter>
+        <parameter key="fungio_google_map.point.class">Fungio\GoogleMap\Base\Point</parameter>
+        <parameter key="fungio_google_map.point.builder.class">Fungio\GoogleMapBundle\Model\Base\PointBuilder</parameter>
+        <parameter key="fungio_google_map.point.helper.class">Fungio\GoogleMap\Helper\Base\PointHelper</parameter>
 
-        <parameter key="ivory_google_map.size.class">Ivory\GoogleMap\Base\Size</parameter>
-        <parameter key="ivory_google_map.size.builder.class">Ivory\GoogleMapBundle\Model\Base\SizeBuilder</parameter>
-        <parameter key="ivory_google_map.size.helper.class">Ivory\GoogleMap\Helper\Base\SizeHelper</parameter>
+        <parameter key="fungio_google_map.size.class">Fungio\GoogleMap\Base\Size</parameter>
+        <parameter key="fungio_google_map.size.builder.class">Fungio\GoogleMapBundle\Model\Base\SizeBuilder</parameter>
+        <parameter key="fungio_google_map.size.helper.class">Fungio\GoogleMap\Helper\Base\SizeHelper</parameter>
     </parameters>
 
     <services>
         <!-- Coordinate service -->
         <service
-            id="ivory_google_map.coordinate"
-            class="%ivory_google_map.coordinate.class%"
-            factory-service="ivory_google_map.coordinate.builder"
-            factory-method="build"
-            scope="prototype"
-        />
-
-        <service id="ivory_google_map.coordinate.builder" class="%ivory_google_map.coordinate.builder.class%">
-            <argument>%ivory_google_map.coordinate.class%</argument>
+            id="fungio_google_map.coordinate"
+            class="%fungio_google_map.coordinate.class%"
+        >
+            <!--scope="prototype"-->
+            <factory service="fungio_google_map.coordinate.builder" method="build" />
         </service>
 
-        <service id="ivory_google_map.helper.coordinate" class="%ivory_google_map.coordinate.helper.class%" public="false" />
+        <service id="fungio_google_map.coordinate.builder" class="%fungio_google_map.coordinate.builder.class%">
+            <argument>%fungio_google_map.coordinate.class%</argument>
+        </service>
+
+        <service id="fungio_google_map.helper.coordinate" class="%fungio_google_map.coordinate.helper.class%" public="false" />
 
         <!-- Bound service -->
         <service
-            id="ivory_google_map.bound"
-            class="%ivory_google_map.bound.class%"
-            factory-service="ivory_google_map.bound.builder"
-            factory-method="build"
-            scope="prototype"
-        />
-
-        <service id="ivory_google_map.bound.builder" class="%ivory_google_map.bound.builder.class%">
-            <argument>%ivory_google_map.bound.class%</argument>
-            <argument type="service" id="ivory_google_map.coordinate.builder" />
+            id="fungio_google_map.bound"
+            class="%fungio_google_map.bound.class%"
+        >
+            <!--scope="prototype"-->
+            <factory service="fungio_google_map.bound.builder" method="build" />
         </service>
 
-        <service id="ivory_google_map.helper.bound" class="%ivory_google_map.bound.helper.class%" public="false">
-            <argument type="service" id="ivory_google_map.helper.coordinate" />
+        <service id="fungio_google_map.bound.builder" class="%fungio_google_map.bound.builder.class%">
+            <argument>%fungio_google_map.bound.class%</argument>
+            <argument type="service" id="fungio_google_map.coordinate.builder" />
+        </service>
+
+        <service id="fungio_google_map.helper.bound" class="%fungio_google_map.bound.helper.class%" public="false">
+            <argument type="service" id="fungio_google_map.helper.coordinate" />
         </service>
 
         <!-- Point service -->
         <service
-            id="ivory_google_map.point"
-            class="%ivory_google_map.point.class%"
-            factory-service="ivory_google_map.point.builder"
-            factory-method="build"
-            scope="prototype"
-        />
-
-        <service id="ivory_google_map.point.builder" class="%ivory_google_map.point.builder.class%">
-            <argument>%ivory_google_map.point.class%</argument>
+            id="fungio_google_map.point"
+            class="%fungio_google_map.point.class%"
+        >
+            <!--scope="prototype"-->
+            <factory service="fungio_google_map.point.builder" method="build" />
         </service>
 
-        <service id="ivory_google_map.helper.point" class="%ivory_google_map.point.helper.class%" public="false" />
+        <service id="fungio_google_map.point.builder" class="%fungio_google_map.point.builder.class%">
+            <argument>%fungio_google_map.point.class%</argument>
+        </service>
+
+        <service id="fungio_google_map.helper.point" class="%fungio_google_map.point.helper.class%" public="false" />
 
         <!-- Size service -->
         <service
-            id="ivory_google_map.size"
-            class="%ivory_google_map.size.class%"
-            factory-service="ivory_google_map.size.builder"
-            factory-method="build"
-            scope="prototype"
-        />
-
-        <service id="ivory_google_map.size.builder" class="%ivory_google_map.size.builder.class%">
-            <argument>%ivory_google_map.size.class%</argument>
+            id="fungio_google_map.size"
+            class="%fungio_google_map.size.class%"
+        >
+            <!--scope="prototype"-->
+            <factory service="fungio_google_map.size.builder" method="build" />
         </service>
 
-        <service id="ivory_google_map.helper.size" class="%ivory_google_map.size.helper.class%" public="false" />
+        <service id="fungio_google_map.size.builder" class="%fungio_google_map.size.builder.class%">
+            <argument>%fungio_google_map.size.class%</argument>
+        </service>
+
+        <service id="fungio_google_map.helper.size" class="%fungio_google_map.size.helper.class%" public="false" />
     </services>
 </container>

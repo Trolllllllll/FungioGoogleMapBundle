@@ -5,7 +5,7 @@
 Require the bundle in your composer.json file:
 
 ```sh
-composer require egeloen/google-map-bundle: ~2.1
+composer require fungio/google-map-bundle: ~2.1
 ```
 
 If you want to use Geocoding stuff, you will need [Geocoder](http://github.com/willdurand/Geocoder):
@@ -30,7 +30,7 @@ If you use Directions or Distance Matrix stuff, don't forget to register the Wid
 public function registerBundles()
 {
     return array(
-        new Ivory\GoogleMapBundle\IvoryGoogleMapBundle(),
+        new Fungio\GoogleMapBundle\FungioGoogleMapBundle(),
         // ...
     );
 }
@@ -44,26 +44,26 @@ $ composer update
 
 ## Symfony 2.0.*
 
-Add Ivory Google Map bundle & library to your deps file:
+Add Fungio Google Map bundle & library to your deps file:
 
 ```
-[IvoryGoogleMapBundle]
-    git=http://github.com/egeloen/IvoryGoogleMapBundle.git
-    target=bundles/Ivory/GoogleMapBundle
+[FungioGoogleMapBundle]
+    git=http://github.com/fungio/FungioGoogleMapBundle.git
+    target=bundles/Fungio/GoogleMapBundle
     version=2.0.3
 
-[ivory-google-map]
-    git=http://github.com/egeloen/ivory-google-map.git
+[fungio-google-map]
+    git=http://github.com/fungio/fungio-google-map.git
 ```
 
-Autoload the Ivory Google Map bundle & library namespaces:
+Autoload the Fungio Google Map bundle & library namespaces:
 
 ``` php
 // app/autoload.php
 
 $loader->registerNamespaces(array(
-    'Ivory\\GoogleMap'       => __DIR__.'/../vendor/ivory-google-map/src',
-    'Ivory\\GoogleMapBundle' => __DIR__.'/../vendor/bundles',
+    'Fungio\\GoogleMap'       => __DIR__.'/../vendor/fungio-google-map/src',
+    'Fungio\\GoogleMapBundle' => __DIR__.'/../vendor/bundles',
     // ...
 );
 ```
@@ -114,7 +114,7 @@ Register the bundle:
 public function registerBundles()
 {
     return array(
-        new Ivory\GoogleMapBundle\IvoryGoogleMapBundle(),
+        new Fungio\GoogleMapBundle\FungioGoogleMapBundle(),
         // ...
     );
 }

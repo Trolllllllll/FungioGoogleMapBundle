@@ -1,4 +1,4 @@
-ivory_google_map:
+fungio_google_map:
     directions_request:
         avoid_highways:             true
         avoid_tolls:                true

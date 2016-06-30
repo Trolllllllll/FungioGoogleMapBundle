@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Controls;
+namespace Fungio\GoogleMapBundle\Tests\Model\Controls;
 
-use Ivory\GoogleMap\Controls\ControlPosition;
-use Ivory\GoogleMap\Controls\MapTypeControlStyle;
-use Ivory\GoogleMap\MapTypeId;
-use Ivory\GoogleMapBundle\Model\Controls\MapTypeControlBuilder;
+use Fungio\GoogleMap\Controls\ControlPosition;
+use Fungio\GoogleMap\Controls\MapTypeControlStyle;
+use Fungio\GoogleMap\MapTypeId;
+use Fungio\GoogleMapBundle\Model\Controls\MapTypeControlBuilder;
 
 /**
  * Map type control builder test.
@@ -23,7 +23,7 @@ use Ivory\GoogleMapBundle\Model\Controls\MapTypeControlBuilder;
  */
 class MapTypeControlBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Controls\MapTypeControlBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Controls\MapTypeControlBuilder */
     protected $mapTypeControlBuilder;
 
     /**
@@ -31,7 +31,7 @@ class MapTypeControlBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->mapTypeControlBuilder = new MapTypeControlBuilder('Ivory\GoogleMap\Controls\MapTypeControl');
+        $this->mapTypeControlBuilder = new MapTypeControlBuilder('Fungio\GoogleMap\Controls\MapTypeControl');
     }
 
     /**
@@ -44,7 +44,7 @@ class MapTypeControlBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testInitialState()
     {
-        $this->assertSame('Ivory\GoogleMap\Controls\MapTypeControl', $this->mapTypeControlBuilder->getClass());
+        $this->assertSame('Fungio\GoogleMap\Controls\MapTypeControl', $this->mapTypeControlBuilder->getClass());
         $this->assertEmpty($this->mapTypeControlBuilder->getMapTypeIds());
         $this->assertNull($this->mapTypeControlBuilder->getControlPosition());
         $this->assertNull($this->mapTypeControlBuilder->getMapTypeControlStyle());

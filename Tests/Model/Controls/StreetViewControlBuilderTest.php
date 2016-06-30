@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Controls;
+namespace Fungio\GoogleMapBundle\Tests\Model\Controls;
 
-use Ivory\GoogleMap\Controls\ControlPosition;
-use Ivory\GoogleMapBundle\Model\Controls\StreetViewControlBuilder;
+use Fungio\GoogleMap\Controls\ControlPosition;
+use Fungio\GoogleMapBundle\Model\Controls\StreetViewControlBuilder;
 
 /**
  * Street view control builder test.
@@ -21,7 +21,7 @@ use Ivory\GoogleMapBundle\Model\Controls\StreetViewControlBuilder;
  */
 class StreetViewControlBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Controls\StreetViewControlBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Controls\StreetViewControlBuilder */
     protected $streetViewControlBuilder;
 
     /**
@@ -29,7 +29,7 @@ class StreetViewControlBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->streetViewControlBuilder = new StreetViewControlBuilder('Ivory\GoogleMap\Controls\StreetViewControl');
+        $this->streetViewControlBuilder = new StreetViewControlBuilder('Fungio\GoogleMap\Controls\StreetViewControl');
     }
 
     /**
@@ -42,7 +42,7 @@ class StreetViewControlBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testInitialState()
     {
-        $this->assertSame('Ivory\GoogleMap\Controls\StreetViewControl', $this->streetViewControlBuilder->getClass());
+        $this->assertSame('Fungio\GoogleMap\Controls\StreetViewControl', $this->streetViewControlBuilder->getClass());
         $this->assertNull($this->streetViewControlBuilder->getControlPosition());
     }
 

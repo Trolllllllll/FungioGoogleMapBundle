@@ -4,4 +4,4 @@ The Google Places JavaScript library's functions enable your application to sear
 establishments, geographic locations, or prominent points of interest) contained within a defined area, such as the
 bounds of a map, or around a fixed point.
 
- 1. [Autocomplete](http://github.com/egeloen/IvoryGoogleMapBundle/blob/master/Resources/doc/usage/places/autocomplete.md)
+ 1. [Autocomplete](http://github.com/fungio/FungioGoogleMapBundle/blob/master/Resources/doc/usage/places/autocomplete.md)

@@ -8,13 +8,13 @@ However, instead of being open-ended, polygons are designed to define regions wi
 ### By configuration file
 
 By default, the bundle doesn't need any configuration. Most of the service have a default configuration which allows
-you to use the given objects like they are. The ``ivory_google_map.polygon`` service is. The configuration describes
+you to use the given objects like they are. The ``fungio_google_map.polygon`` service is. The configuration describes
 below is this default configuration.
 
 ```yaml
 # app/config/config.yml
 
-ivory_google_map
+fungio_google_map
     polygon:
         # Your own polygon class
         class: "My\Fucking\Polygon"
@@ -35,11 +35,11 @@ ivory_google_map
 ``` php
 <?php
 
-// Requests the ivory google map polygon service
-$polygon = $this->get('ivory_google_map.polygon');
+// Requests the fungio google map polygon service
+$polygon = $this->get('fungio_google_map.polygon');
 ```
 
 ### By coding
 
 If you want to learn more, you can read
-[this documentation](https://github.com/egeloen/ivory-google-map/blob/master/doc/usage/overlays/polygon.md).
+[this documentation](https://github.com/fungio/fungio-google-map/blob/master/doc/usage/overlays/polygon.md).

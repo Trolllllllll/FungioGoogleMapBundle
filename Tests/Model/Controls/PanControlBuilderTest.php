@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Controls;
+namespace Fungio\GoogleMapBundle\Tests\Model\Controls;
 
-use Ivory\GoogleMap\Controls\ControlPosition;
-use Ivory\GoogleMapBundle\Model\Controls\PanControlBuilder;
+use Fungio\GoogleMap\Controls\ControlPosition;
+use Fungio\GoogleMapBundle\Model\Controls\PanControlBuilder;
 
 /**
  * Pan control builder test.
@@ -21,7 +21,7 @@ use Ivory\GoogleMapBundle\Model\Controls\PanControlBuilder;
  */
 class PanControlBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Controls\PanControlBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Controls\PanControlBuilder */
     protected $panControlBuilder;
 
     /**
@@ -29,7 +29,7 @@ class PanControlBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->panControlBuilder = new PanControlBuilder('Ivory\GoogleMap\Controls\PanControl');
+        $this->panControlBuilder = new PanControlBuilder('Fungio\GoogleMap\Controls\PanControl');
     }
 
     /**
@@ -42,7 +42,7 @@ class PanControlBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testInitialState()
     {
-        $this->assertSame('Ivory\GoogleMap\Controls\PanControl', $this->panControlBuilder->getClass());
+        $this->assertSame('Fungio\GoogleMap\Controls\PanControl', $this->panControlBuilder->getClass());
         $this->assertNull($this->panControlBuilder->getControlPosition());
     }
 

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Events;
+namespace Fungio\GoogleMapBundle\Tests\Model\Events;
 
-use Ivory\GoogleMapBundle\Model\Events\EventBuilder;
+use Fungio\GoogleMapBundle\Model\Events\EventBuilder;
 
 /**
  * Event builder test.
@@ -20,7 +20,7 @@ use Ivory\GoogleMapBundle\Model\Events\EventBuilder;
  */
 class EventBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Events\EventBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Events\EventBuilder */
     protected $eventBuilder;
 
     /**
@@ -28,7 +28,7 @@ class EventBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->eventBuilder = new EventBuilder('Ivory\GoogleMap\Events\Event');
+        $this->eventBuilder = new EventBuilder('Fungio\GoogleMap\Events\Event');
     }
 
     /**
@@ -41,7 +41,7 @@ class EventBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testInitialState()
     {
-        $this->assertSame('Ivory\GoogleMap\Events\Event', $this->eventBuilder->getClass());
+        $this->assertSame('Fungio\GoogleMap\Events\Event', $this->eventBuilder->getClass());
         $this->assertNull($this->eventBuilder->getPrefixJavascriptVariable());
         $this->assertNull($this->eventBuilder->getInstance());
         $this->assertNull($this->eventBuilder->getEventName());

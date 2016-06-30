@@ -1,4 +1,4 @@
-ivory_google_map:
+fungio_google_map:
     coordinate:
         prefix_javascript_variable: "foo"
         latitude:                   1.1

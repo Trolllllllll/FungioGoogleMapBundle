@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Overlays;
+namespace Fungio\GoogleMapBundle\Tests\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\Base\BoundBuilder;
-use Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder;
-use Ivory\GoogleMapBundle\Model\Overlays\GroundOverlayBuilder;
+use Fungio\GoogleMapBundle\Model\Base\BoundBuilder;
+use Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder;
+use Fungio\GoogleMapBundle\Model\Overlays\GroundOverlayBuilder;
 
 /**
  * Ground overlay builder test.
@@ -22,10 +22,10 @@ use Ivory\GoogleMapBundle\Model\Overlays\GroundOverlayBuilder;
  */
 class GroundOverlayBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Overlays\GroundOverlayBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Overlays\GroundOverlayBuilder */
     protected $groundOverlayBuilder;
 
-    /** @var \Ivory\GoogleMapBundle\Model\Base\BoundBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Base\BoundBuilder */
     protected $boundBuilder;
 
     /**
@@ -34,12 +34,12 @@ class GroundOverlayBuilderTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         $this->boundBuilder = new BoundBuilder(
-            'Ivory\GoogleMap\Base\Bound',
-            new CoordinateBuilder('Ivory\GoogleMap\Base\Coordinate')
+            'Fungio\GoogleMap\Base\Bound',
+            new CoordinateBuilder('Fungio\GoogleMap\Base\Coordinate')
         );
 
         $this->groundOverlayBuilder = new GroundOverlayBuilder(
-            'Ivory\GoogleMap\Overlays\GroundOverlay',
+            'Fungio\GoogleMap\Overlays\GroundOverlay',
             $this->boundBuilder
         );
     }
@@ -55,7 +55,7 @@ class GroundOverlayBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testInitialState()
     {
-        $this->assertSame('Ivory\GoogleMap\Overlays\GroundOverlay', $this->groundOverlayBuilder->getClass());
+        $this->assertSame('Fungio\GoogleMap\Overlays\GroundOverlay', $this->groundOverlayBuilder->getClass());
         $this->assertSame($this->boundBuilder, $this->groundOverlayBuilder->getBoundBuilder());
         $this->assertNull($this->groundOverlayBuilder->getPrefixJavascriptVariable());
         $this->assertNull($this->groundOverlayBuilder->getUrl());

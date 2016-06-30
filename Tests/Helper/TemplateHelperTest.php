@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Helper;
+namespace Fungio\GoogleMapBundle\Tests\Helper;
 
-use Ivory\GoogleMapBundle\Helper\TemplateHelper;
+use Fungio\GoogleMapBundle\Helper\TemplateHelper;
 
 /**
  * Template helper test.
@@ -20,10 +20,10 @@ use Ivory\GoogleMapBundle\Helper\TemplateHelper;
  */
 class TemplateHelperTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Helper\TemplateHelper */
+    /** @var \Fungio\GoogleMapBundle\Helper\TemplateHelper */
     protected $templateHelper;
 
-    /** @var \Ivory\GoogleMap\Helper\MapHelper */
+    /** @var \Fungio\GoogleMap\Helper\MapHelper */
     protected $mapHelperMock;
 
     /**
@@ -31,7 +31,7 @@ class TemplateHelperTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->mapHelperMock = $this->getMock('Ivory\GoogleMap\Helper\MapHelper');
+        $this->mapHelperMock = $this->getMock('Fungio\GoogleMap\Helper\MapHelper');
         $this->templateHelper = new TemplateHelper($this->mapHelperMock);
     }
 
@@ -47,12 +47,12 @@ class TemplateHelperTest extends \PHPUnit_Framework_TestCase
     public function testInitialState()
     {
         $this->assertInstanceOf('Symfony\Component\Templating\Helper\Helper', $this->templateHelper);
-        $this->assertSame('ivory_google_map', $this->templateHelper->getName());
+        $this->assertSame('fungio_google_map', $this->templateHelper->getName());
     }
 
     public function testRenderMap()
     {
-        $map = $this->getMock('Ivory\GoogleMap\Map');
+        $map = $this->getMock('Fungio\GoogleMap\Map');
 
         $this->mapHelperMock
             ->expects($this->once())
@@ -65,7 +65,7 @@ class TemplateHelperTest extends \PHPUnit_Framework_TestCase
 
     public function testRenderHtmlContainer()
     {
-        $map = $this->getMock('Ivory\GoogleMap\Map');
+        $map = $this->getMock('Fungio\GoogleMap\Map');
 
         $this->mapHelperMock
             ->expects($this->once())
@@ -78,7 +78,7 @@ class TemplateHelperTest extends \PHPUnit_Framework_TestCase
 
     public function testRenderStylesheets()
     {
-        $map = $this->getMock('Ivory\GoogleMap\Map');
+        $map = $this->getMock('Fungio\GoogleMap\Map');
 
         $this->mapHelperMock
             ->expects($this->once())
@@ -91,7 +91,7 @@ class TemplateHelperTest extends \PHPUnit_Framework_TestCase
 
     public function testRenderJavascripts()
     {
-        $map = $this->getMock('Ivory\GoogleMap\Map');
+        $map = $this->getMock('Fungio\GoogleMap\Map');
 
         $this->mapHelperMock
             ->expects($this->once())

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Controls;
+namespace Fungio\GoogleMapBundle\Tests\Model\Controls;
 
-use Ivory\GoogleMapBundle\Model\Controls\OverviewMapControlBuilder;
+use Fungio\GoogleMapBundle\Model\Controls\OverviewMapControlBuilder;
 
 /**
  * Overview map control builder test.
@@ -20,7 +20,7 @@ use Ivory\GoogleMapBundle\Model\Controls\OverviewMapControlBuilder;
  */
 class OverviewMapControlBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Controls\OverviewMapControlBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Controls\OverviewMapControlBuilder */
     protected $overviewMapControlBuilder;
 
     /**
@@ -28,7 +28,7 @@ class OverviewMapControlBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->overviewMapControlBuilder = new OverviewMapControlBuilder('Ivory\GoogleMap\Controls\OverviewMapControl');
+        $this->overviewMapControlBuilder = new OverviewMapControlBuilder('Fungio\GoogleMap\Controls\OverviewMapControl');
     }
 
     /**
@@ -41,7 +41,7 @@ class OverviewMapControlBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testInitialState()
     {
-        $this->assertSame('Ivory\GoogleMap\Controls\OverviewMapControl', $this->overviewMapControlBuilder->getClass());
+        $this->assertSame('Fungio\GoogleMap\Controls\OverviewMapControl', $this->overviewMapControlBuilder->getClass());
         $this->assertNull($this->overviewMapControlBuilder->isOpened());
     }
 

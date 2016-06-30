@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,26 +9,26 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Twig;
+namespace Fungio\GoogleMapBundle\Twig;
 
-use Ivory\GoogleMap\Map;
-use Ivory\GoogleMapBundle\Helper\TemplateHelper;
+use Fungio\GoogleMap\Map;
+use Fungio\GoogleMapBundle\Helper\TemplateHelper;
 use Twig_SimpleFunction;
 
 /**
- * Ivory google map twig extension.
+ * Fungio google map twig extension.
  *
  * @author GeLo <geloen.eric@gmail.com>
  */
 class GoogleMapExtension extends \Twig_Extension
 {
-    /** @var \Ivory\GoogleMapBundle\Helper\TemplateHelper */
+    /** @var \Fungio\GoogleMapBundle\Helper\TemplateHelper */
     protected $templateHelper;
 
     /**
      * Create the google map twig extension.
      *
-     * @param \Ivory\GoogleMapBundle\Helper\TemplateHelper $templateHelper The template helper.
+     * @param \Fungio\GoogleMapBundle\Helper\TemplateHelper $templateHelper The template helper.
      */
     public function __construct(TemplateHelper $templateHelper)
     {
@@ -58,7 +58,7 @@ class GoogleMapExtension extends \Twig_Extension
     /**
      * Renders the google map.
      *
-     * @param \Ivory\GoogleMap\Map $map The map.
+     * @param \Fungio\GoogleMap\Map $map The map.
      *
      * @return string The html output.
      */
@@ -70,7 +70,7 @@ class GoogleMapExtension extends \Twig_Extension
     /**
      * Renders the google map html container.
      *
-     * @param \Ivory\GoogleMap\Map $map The map.
+     * @param \Fungio\GoogleMap\Map $map The map.
      *
      * @return string The html output.
      */
@@ -82,7 +82,7 @@ class GoogleMapExtension extends \Twig_Extension
     /**
      * Renders the google map stylesheets.
      *
-     * @param \Ivory\GoogleMap\Map $map The map.
+     * @param \Fungio\GoogleMap\Map $map The map.
      *
      * @return string The html output.
      */
@@ -94,7 +94,7 @@ class GoogleMapExtension extends \Twig_Extension
     /**
      * Renders the google map javascripts.
      *
-     * @param \Ivory\GoogleMap\Map $map The map.
+     * @param \Fungio\GoogleMap\Map $map The map.
      *
      * @return string The html output.
      */
@@ -108,6 +108,6 @@ class GoogleMapExtension extends \Twig_Extension
      */
     public function getName()
     {
-        return 'ivory_google_map';
+        return 'fungio_google_map';
     }
 }

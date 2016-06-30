@@ -5,14 +5,14 @@
 ### By configuration file
 
 By default, the bundle doesn't need any configuration. Most of the service have a default configuration which allows
-you to use the given objects like they are. The ``ivory_google_map.geocoder_request`` service is not one of them. The
+you to use the given objects like they are. The ``fungio_google_map.geocoder_request`` service is not one of them. The
 configuration describes below is this default configuration but if you don't provide at least one value (for the
 `geocoder` or `geocoder_request` nodes), the service will not be registered.
 
 ```yaml
 # app/config/config.yml
 
-ivory_google_map:
+fungio_google_map:
     geocoder_request:
         # Your own geocoder request class
         class: "My\Fucking\GeocoderRequest"
@@ -59,11 +59,11 @@ ivory_google_map:
 <?php
 
 /**
- * Requests & configure the ivory google map geocoder service
+ * Requests & configure the fungio google map geocoder service
  *
- * @var Ivory\GoogleMap\Services\Geocoding\GeocoderRequest $request
+ * @var Fungio\GoogleMap\Services\Geocoding\GeocoderRequest $request
  */
-$request = $this->get('ivory_google_map.geocoder_request');
+$request = $this->get('fungio_google_map.geocoder_request');
 ```
 
 ### By coding
@@ -72,11 +72,11 @@ $request = $this->get('ivory_google_map.geocoder_request');
 <?php
 
 /**
- * Requests & configure the ivory google map geocoder service
+ * Requests & configure the fungio google map geocoder service
  *
- * @var Ivory\GoogleMap\Services\Geocoding\GeocoderRequest $request
+ * @var Fungio\GoogleMap\Services\Geocoding\GeocoderRequest $request
  */
-$request = $this->get('ivory_google_map.geocoder_request')
+$request = $this->get('fungio_google_map.geocoder_request')
     // Set address
     ->setAddress('1600 Amphitheatre Parkway, Mountain View, CA')
     // Or set coordinate (reverse geocoding)
@@ -94,8 +94,8 @@ If you set an address & a coordinate, address takes precedence over coordinate.
 ``` php
 <?php
 
-// Requests the ivory google map geocoder service
-$geocoder = $this->get('ivory_google_map.geocoder');
+// Requests the fungio google map geocoder service
+$geocoder = $this->get('fungio_google_map.geocoder');
 
 // Geocode your request
 $response = $geocoder->geocode($request);

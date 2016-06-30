@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Overlays;
+namespace Fungio\GoogleMapBundle\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Fungio\GoogleMapBundle\Model\AbstractBuilder;
 
 /**
  * Marker cluster builder.
@@ -59,7 +59,7 @@ class MarkerClusterBuilder extends AbstractBuilder
      *
      * @param string $prefixJavascriptVariable The marker cluster builder prefix javascript variable.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\MarkerClusterBuilder The marker cluster builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\MarkerClusterBuilder The marker cluster builder.
      */
     public function setPrefixJavascriptVariable($prefixJavascriptVariable)
     {
@@ -83,7 +83,7 @@ class MarkerClusterBuilder extends AbstractBuilder
      *
      * @param string $type The marker cluster builder type.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\MarkerClusterBuilder The marker cluster builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\MarkerClusterBuilder The marker cluster builder.
      */
     public function setType($type)
     {
@@ -107,7 +107,7 @@ class MarkerClusterBuilder extends AbstractBuilder
      *
      * @param array $markers The marker cluster builder markers.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\MarkerClusterBuilder The marker cluster builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\MarkerClusterBuilder The marker cluster builder.
      */
     public function setMarkers(array $markers)
     {
@@ -131,7 +131,7 @@ class MarkerClusterBuilder extends AbstractBuilder
      *
      * @param array $options The marker cluster builder options.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\MarkerClusterBuilder The marker cluster builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\MarkerClusterBuilder The marker cluster builder.
      */
     public function setOptions(array $options)
     {
@@ -156,7 +156,7 @@ class MarkerClusterBuilder extends AbstractBuilder
     /**
      * {@inheritdoc}
      *
-     * @return \Ivory\GoogleMap\Overlays\MarkerCluster The marker cluster.
+     * @return \Fungio\GoogleMap\Overlays\MarkerCluster The marker cluster.
      */
     public function build()
     {

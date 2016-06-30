@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Overlays;
+namespace Fungio\GoogleMapBundle\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
-use Ivory\GoogleMapBundle\Model\Base\BoundBuilder;
+use Fungio\GoogleMapBundle\Model\AbstractBuilder;
+use Fungio\GoogleMapBundle\Model\Base\BoundBuilder;
 
 /**
  * Rectangle builder.
@@ -21,7 +21,7 @@ use Ivory\GoogleMapBundle\Model\Base\BoundBuilder;
  */
 class RectangleBuilder extends AbstractBuilder
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Base\BoundBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Base\BoundBuilder */
     protected $boundBuilder;
 
     /** @var string */
@@ -37,7 +37,7 @@ class RectangleBuilder extends AbstractBuilder
      * Creates a rectangle builder.
      *
      * @param string                                         $class        The class to build.
-     * @param \Ivory\GoogleMapBundle\Model\Base\BoundBuilder $boundBuilder The bound builder.
+     * @param \Fungio\GoogleMapBundle\Model\Base\BoundBuilder $boundBuilder The bound builder.
      */
     public function __construct($class, BoundBuilder $boundBuilder)
     {
@@ -50,7 +50,7 @@ class RectangleBuilder extends AbstractBuilder
     /**
      * Gets the bound builder.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\BoundBuilder The bound builder.
+     * @return \Fungio\GoogleMapBundle\Model\Base\BoundBuilder The bound builder.
      */
     public function getBoundBuilder()
     {
@@ -60,9 +60,9 @@ class RectangleBuilder extends AbstractBuilder
     /**
      * Sets the bound builder.
      *
-     * @param \Ivory\GoogleMapBundle\Model\Base\BoundBuilder $boundBuilder The bound builder.
+     * @param \Fungio\GoogleMapBundle\Model\Base\BoundBuilder $boundBuilder The bound builder.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\RectangleBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\RectangleBuilder The builder.
      */
     public function setBoundBuilder(BoundBuilder $boundBuilder)
     {
@@ -86,7 +86,7 @@ class RectangleBuilder extends AbstractBuilder
      *
      * @param string $prefixJavascriptVariable The prefix javascript variable.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\RectangleBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\RectangleBuilder The builder.
      */
     public function setPrefixJavascriptVariable($prefixJavascriptVariable)
     {
@@ -115,7 +115,7 @@ class RectangleBuilder extends AbstractBuilder
      * @param boolean $southWestNoWrap    The north east longitude.
      * @param boolean $northEastNoWrap    The north east no wrap.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\RectangleBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\RectangleBuilder The builder.
      */
     public function setBound(
         $southWestLatitude,
@@ -152,7 +152,7 @@ class RectangleBuilder extends AbstractBuilder
      *
      * @param array $options The options.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\RectangleBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\RectangleBuilder The builder.
      */
     public function setOptions(array $options)
     {
@@ -178,7 +178,7 @@ class RectangleBuilder extends AbstractBuilder
     /**
      * {@inheritdoc}
      *
-     * @return \Ivory\GoogleMap\Overlays\Rectangle The reclangle.
+     * @return \Fungio\GoogleMap\Overlays\Rectangle The reclangle.
      */
     public function build()
     {

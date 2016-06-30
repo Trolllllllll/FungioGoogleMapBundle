@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Overlays;
+namespace Fungio\GoogleMapBundle\Tests\Model\Overlays;
 
-use Ivory\GoogleMap\Overlays\Animation;
-use Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder;
-use Ivory\GoogleMapBundle\Model\Overlays\MarkerBuilder;
+use Fungio\GoogleMap\Overlays\Animation;
+use Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder;
+use Fungio\GoogleMapBundle\Model\Overlays\MarkerBuilder;
 
 /**
  * Marker builder test.
@@ -22,10 +22,10 @@ use Ivory\GoogleMapBundle\Model\Overlays\MarkerBuilder;
  */
 class MarkerBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Overlays\MarkerBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Overlays\MarkerBuilder */
     protected $markerBuilder;
 
-    /** @var \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder */
     protected $coordinateBuilder;
 
     /**
@@ -33,8 +33,8 @@ class MarkerBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->coordinateBuilder = new CoordinateBuilder('Ivory\GoogleMap\Base\Coordinate');
-        $this->markerBuilder = new MarkerBuilder('Ivory\GoogleMap\Overlays\Marker', $this->coordinateBuilder);
+        $this->coordinateBuilder = new CoordinateBuilder('Fungio\GoogleMap\Base\Coordinate');
+        $this->markerBuilder = new MarkerBuilder('Fungio\GoogleMap\Overlays\Marker', $this->coordinateBuilder);
     }
 
     /**
@@ -48,7 +48,7 @@ class MarkerBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testInitialState()
     {
-        $this->assertSame('Ivory\GoogleMap\Overlays\Marker', $this->markerBuilder->getClass());
+        $this->assertSame('Fungio\GoogleMap\Overlays\Marker', $this->markerBuilder->getClass());
         $this->assertSame($this->coordinateBuilder, $this->markerBuilder->getCoordinateBuilder());
         $this->assertNull($this->markerBuilder->getPrefixJavascriptVariable());
         $this->assertEmpty($this->markerBuilder->getPosition());

@@ -4,7 +4,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <mapped-superclass name="Ivory\GoogleMapBundle\Entity\EncodedPolyline" table="ivory_encoded_polyline">
+    <mapped-superclass name="Fungio\GoogleMapBundle\Entity\EncodedPolyline" table="fungio_encoded_polyline">
         <field name="javascriptVariable" column="javascript_variable" type="string" length="100" />
         <field name="value" type="text" />
         <field name="options" type="array" />

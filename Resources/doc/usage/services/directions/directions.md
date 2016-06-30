@@ -11,14 +11,14 @@ or as latitude/longitude coordinates. The Directions API can return multi-part d
 ## Request the directions service
 
 By default, the bundle doesn't need any configuration. Most of the service have a default configuration which allows
-you to use the given objects like they are. The ``ivory_google_map.geocoder`` service is not one of them. The
+you to use the given objects like they are. The ``fungio_google_map.geocoder`` service is not one of them. The
 configuration describes below is this default configuration but if you don't provide at least one value (for the
 `directions` or `directions_request` nodes), the service will not be registered.
 
 ```yaml
 # app/config/config.yml
 
-ivory_google_map:
+fungio_google_map:
     directions:
         # Enable the service
         enabled: true
@@ -40,11 +40,11 @@ ivory_google_map:
 ```
 
 ``` php
-$directions = $this->get('ivory_google_map.directions');
+$directions = $this->get('fungio_google_map.directions');
 ```
 
 If you want to use it with a business account, you can read this
-[documentation](http://github.com/egeloen/IvoryGoogleMapBundle/blob/master/Resources/doc/usage/services/business_account.md).
+[documentation](http://github.com/fungio/FungioGoogleMapBundle/blob/master/Resources/doc/usage/services/business_account.md).
 
 ## Request a direction
 
@@ -53,8 +53,8 @@ $response = $directions->route('New York', 'Washington');
 ```
 
 The directions service allows you to route a much more advance request. If you want to learn more, you can read this
-[documentation](http://github.com/egeloen/IvoryGoogleMapBundle/blob/master/Resources/doc/usage/services/directions/directions_request.md).
+[documentation](http://github.com/fungio/FungioGoogleMapBundle/blob/master/Resources/doc/usage/services/directions/directions_request.md).
 
 When you have requested your direction, the returned object is an
-``Ivory\GoogleMap\Services\Directions\DirectionsResponse``. If you want to learn more about the response, you
-can read this [documentation](http://github.com/egeloen/ivory-google-map/blob/master/doc/usage/services/directions/directions.md).
+``Fungio\GoogleMap\Services\Directions\DirectionsResponse``. If you want to learn more about the response, you
+can read this [documentation](http://github.com/fungio/fungio-google-map/blob/master/doc/usage/services/directions/directions.md).

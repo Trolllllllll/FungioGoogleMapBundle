@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Overlays;
+namespace Fungio\GoogleMapBundle\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
-use Ivory\GoogleMapBundle\Model\Base\PointBuilder;
-use Ivory\GoogleMapBundle\Model\Base\SizeBuilder;
+use Fungio\GoogleMapBundle\Model\AbstractBuilder;
+use Fungio\GoogleMapBundle\Model\Base\PointBuilder;
+use Fungio\GoogleMapBundle\Model\Base\SizeBuilder;
 
 /**
  * Marker image builder.
@@ -22,10 +22,10 @@ use Ivory\GoogleMapBundle\Model\Base\SizeBuilder;
  */
 class MarkerImageBuilder extends AbstractBuilder
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Base\PointBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Base\PointBuilder */
     protected $pointBuilder;
 
-    /** @var \Ivory\GoogleMapBundle\Model\Base\SizeBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Base\SizeBuilder */
     protected $sizeBuilder;
 
     /** @var string */
@@ -50,8 +50,8 @@ class MarkerImageBuilder extends AbstractBuilder
      * Creates a marker image builder.
      *
      * @param string                                         $class        The class to build.
-     * @param \Ivory\GoogleMapBundle\Model\Base\PointBuilder $pointBuilder The point builder.
-     * @param \Ivory\GoogleMapBundle\Model\Base\SizeBuilder  $sizeBuilder  The size builder.
+     * @param \Fungio\GoogleMapBundle\Model\Base\PointBuilder $pointBuilder The point builder.
+     * @param \Fungio\GoogleMapBundle\Model\Base\SizeBuilder  $sizeBuilder  The size builder.
      */
     public function __construct($class, PointBuilder $pointBuilder, SizeBuilder $sizeBuilder)
     {
@@ -65,7 +65,7 @@ class MarkerImageBuilder extends AbstractBuilder
     /**
      * Gets the point builder.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\PointBuilder The point builder.
+     * @return \Fungio\GoogleMapBundle\Model\Base\PointBuilder The point builder.
      */
     public function getPointBuilder()
     {
@@ -75,9 +75,9 @@ class MarkerImageBuilder extends AbstractBuilder
     /**
      * Sets the point builder.
      *
-     * @param \Ivory\GoogleMapBundle\Model\Base\PointBuilder $pointBuilder The point builder.
+     * @param \Fungio\GoogleMapBundle\Model\Base\PointBuilder $pointBuilder The point builder.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\MarkerImageBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\MarkerImageBuilder The builder.
      */
     public function setPointBuilder(PointBuilder $pointBuilder)
     {
@@ -89,7 +89,7 @@ class MarkerImageBuilder extends AbstractBuilder
     /**
      * Gets the size builder.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\SizeBuilder The size builder.
+     * @return \Fungio\GoogleMapBundle\Model\Base\SizeBuilder The size builder.
      */
     public function getSizeBuilder()
     {
@@ -99,9 +99,9 @@ class MarkerImageBuilder extends AbstractBuilder
     /**
      * Sets the size builder.
      *
-     * @param \Ivory\GoogleMapBundle\Model\Base\SizeBuilder $sizeBuilder The size builder.
+     * @param \Fungio\GoogleMapBundle\Model\Base\SizeBuilder $sizeBuilder The size builder.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\MarkerImageBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\MarkerImageBuilder The builder.
      */
     public function setSizeBuilder(SizeBuilder $sizeBuilder)
     {
@@ -125,7 +125,7 @@ class MarkerImageBuilder extends AbstractBuilder
      *
      * @param string $prefixJavascriptVariable The javascript variable.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\MarkerImageBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\MarkerImageBuilder The builder.
      */
     public function setPrefixJavascriptVariable($prefixJavascriptVariable)
     {
@@ -149,7 +149,7 @@ class MarkerImageBuilder extends AbstractBuilder
      *
      * @param string $url The url.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\MarkerImageBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\MarkerImageBuilder The builder.
      */
     public function setUrl($url)
     {
@@ -174,7 +174,7 @@ class MarkerImageBuilder extends AbstractBuilder
      * @param double $x The X coordinate.
      * @param double $y The Y coordinate.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\MarkerImageBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\MarkerImageBuilder The builder.
      */
     public function setAnchor($x, $y)
     {
@@ -199,7 +199,7 @@ class MarkerImageBuilder extends AbstractBuilder
      * @param double $x The X coordinate.
      * @param double $y The Y coordinate.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\MarkerImageBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\MarkerImageBuilder The builder.
      */
     public function setOrigin($x, $y)
     {
@@ -226,7 +226,7 @@ class MarkerImageBuilder extends AbstractBuilder
      * @param string $widthUnit  The width unit.
      * @param string $heightUnit The height unit.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\MarkerImageBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\MarkerImageBuilder The builder.
      */
     public function setScaledSize($width, $height, $widthUnit = null, $heightUnit = null)
     {
@@ -253,7 +253,7 @@ class MarkerImageBuilder extends AbstractBuilder
      * @param string $widthUnit  The width unit.
      * @param string $heightUnit The height unit.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\MarkerImageBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\MarkerImageBuilder The builder.
      */
     public function setSize($width, $height, $widthUnit = null, $heightUnit = null)
     {
@@ -280,7 +280,7 @@ class MarkerImageBuilder extends AbstractBuilder
     /**
      * {@inheritdoc}
      *
-     * @return \Ivory\GoogleMap\Overlays\MarkerImage The marker image.
+     * @return \Fungio\GoogleMap\Overlays\MarkerImage The marker image.
      */
     public function build()
     {

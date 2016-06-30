@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Base;
+namespace Fungio\GoogleMapBundle\Tests\Model\Base;
 
-use Ivory\GoogleMapBundle\Model\Base\BoundBuilder;
-use Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder;
+use Fungio\GoogleMapBundle\Model\Base\BoundBuilder;
+use Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder;
 
 /**
  * Bound builder test.
@@ -21,10 +21,10 @@ use Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder;
  */
 class BoundBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Base\BoundBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Base\BoundBuilder */
     protected $boundBuilder;
 
-    /** @var \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder */
     protected $coordinateBuilder;
 
     /**
@@ -32,8 +32,8 @@ class BoundBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->coordinateBuilder = new CoordinateBuilder('Ivory\GoogleMap\Base\Coordinate');
-        $this->boundBuilder = new BoundBuilder('Ivory\GoogleMap\Base\Bound', $this->coordinateBuilder);
+        $this->coordinateBuilder = new CoordinateBuilder('Fungio\GoogleMap\Base\Coordinate');
+        $this->boundBuilder = new BoundBuilder('Fungio\GoogleMap\Base\Bound', $this->coordinateBuilder);
     }
 
     /**
@@ -47,7 +47,7 @@ class BoundBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testInitialState()
     {
-        $this->assertSame('Ivory\GoogleMap\Base\Bound', $this->boundBuilder->getClass());
+        $this->assertSame('Fungio\GoogleMap\Base\Bound', $this->boundBuilder->getClass());
         $this->assertSame($this->coordinateBuilder, $this->boundBuilder->getCoordinateBuilder());
         $this->assertEmpty($this->boundBuilder->getSouthWest());
         $this->assertEmpty($this->boundBuilder->getNorthEast());

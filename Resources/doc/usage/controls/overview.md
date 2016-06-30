@@ -8,13 +8,13 @@ This control appears by default in the bottom right corner of the map, and is by
 ### By configuration file
 
 By default, the bundle doesn't need any configuration. Most of the service have a default configuration which allows
-you to use the given objects like they are. The ``ivory_google_map.overview_map_control`` service is. The configuration
+you to use the given objects like they are. The ``fungio_google_map.overview_map_control`` service is. The configuration
 describes below is this default configuration.
 
 ```yaml
 # app/config/config.yml
 
-ivory_google_map:
+fungio_google_map:
     overview_map_control:
         # You own overview map control class
         class: "My\Fucking\OverviewMapControl"
@@ -29,11 +29,11 @@ ivory_google_map:
 ``` php
 <?php
 
-// Requests the ivory google map overview control service
-$overviewMapControl = $this->get('ivory_google_map.overview_map_control');
+// Requests the fungio google map overview control service
+$overviewMapControl = $this->get('fungio_google_map.overview_map_control');
 ```
 
 ### By coding
 
 If you want to learn more, you can read
-[this documentation](https://github.com/egeloen/ivory-google-map/blob/master/doc/usage/controls/overview.md).
+[this documentation](https://github.com/fungio/fungio-google-map/blob/master/doc/usage/controls/overview.md).

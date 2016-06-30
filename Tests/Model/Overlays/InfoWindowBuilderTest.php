@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Overlays;
+namespace Fungio\GoogleMapBundle\Tests\Model\Overlays;
 
-use Ivory\GoogleMap\Events\MouseEvent;
-use Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder;
-use Ivory\GoogleMapBundle\Model\Base\SizeBuilder;
-use Ivory\GoogleMapBundle\Model\Overlays\InfoWindowBuilder;
+use Fungio\GoogleMap\Events\MouseEvent;
+use Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder;
+use Fungio\GoogleMapBundle\Model\Base\SizeBuilder;
+use Fungio\GoogleMapBundle\Model\Overlays\InfoWindowBuilder;
 
 /**
  * Info window builder test.
@@ -23,13 +23,13 @@ use Ivory\GoogleMapBundle\Model\Overlays\InfoWindowBuilder;
  */
 class InfoWindowBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Overlays\InfoWindowBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Overlays\InfoWindowBuilder */
     protected $infoWindowBuilder;
 
-    /** @var \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder */
     protected $coordinateBuilder;
 
-    /** @var \Ivory\GoogleMapBundle\Model\Base\SizeBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Base\SizeBuilder */
     protected $sizeBuilder;
 
     /**
@@ -37,11 +37,11 @@ class InfoWindowBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->coordinateBuilder = new CoordinateBuilder('Ivory\GoogleMap\Base\Coordinate');
-        $this->sizeBuilder = new SizeBuilder('Ivory\GoogleMap\Base\Size');
+        $this->coordinateBuilder = new CoordinateBuilder('Fungio\GoogleMap\Base\Coordinate');
+        $this->sizeBuilder = new SizeBuilder('Fungio\GoogleMap\Base\Size');
 
         $this->infoWindowBuilder = new InfoWindowBuilder(
-            'Ivory\GoogleMap\Overlays\InfoWindow',
+            'Fungio\GoogleMap\Overlays\InfoWindow',
             $this->coordinateBuilder,
             $this->sizeBuilder
         );
@@ -59,7 +59,7 @@ class InfoWindowBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testInitialState()
     {
-        $this->assertSame('Ivory\GoogleMap\Overlays\InfoWindow', $this->infoWindowBuilder->getClass());
+        $this->assertSame('Fungio\GoogleMap\Overlays\InfoWindow', $this->infoWindowBuilder->getClass());
         $this->assertSame($this->coordinateBuilder, $this->infoWindowBuilder->getCoordinateBuilder());
         $this->assertSame($this->sizeBuilder, $this->infoWindowBuilder->getSizeBuilder());
         $this->assertNull($this->infoWindowBuilder->getPrefixJavascriptVariable());

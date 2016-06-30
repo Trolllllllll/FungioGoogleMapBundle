@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Overlays;
+namespace Fungio\GoogleMapBundle\Tests\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder;
-use Ivory\GoogleMapBundle\Model\Overlays\CircleBuilder;
+use Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder;
+use Fungio\GoogleMapBundle\Model\Overlays\CircleBuilder;
 
 /**
  * Circle builder test.
@@ -21,10 +21,10 @@ use Ivory\GoogleMapBundle\Model\Overlays\CircleBuilder;
  */
 class CircleBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Overlays\CircleBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Overlays\CircleBuilder */
     protected $circleBuilder;
 
-    /** @var \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder */
     protected $coordinateBuilder;
 
     /**
@@ -32,8 +32,8 @@ class CircleBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->coordinateBuilder = new CoordinateBuilder('Ivory\GoogleMap\Base\Coordinate');
-        $this->circleBuilder = new CircleBuilder('Ivory\GoogleMap\Overlays\Circle', $this->coordinateBuilder);
+        $this->coordinateBuilder = new CoordinateBuilder('Fungio\GoogleMap\Base\Coordinate');
+        $this->circleBuilder = new CircleBuilder('Fungio\GoogleMap\Overlays\Circle', $this->coordinateBuilder);
     }
 
     /**
@@ -47,7 +47,7 @@ class CircleBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testInitialState()
     {
-        $this->assertSame('Ivory\GoogleMap\Overlays\Circle', $this->circleBuilder->getClass());
+        $this->assertSame('Fungio\GoogleMap\Overlays\Circle', $this->circleBuilder->getClass());
         $this->assertSame($this->coordinateBuilder, $this->circleBuilder->getCoordinateBuilder());
         $this->assertNull($this->circleBuilder->getPrefixJavascriptVariable());
         $this->assertEmpty($this->circleBuilder->getCenter());

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Entity;
+namespace Fungio\GoogleMapBundle\Tests\Entity;
 
-use Ivory\GoogleMapBundle\Entity\Marker;
+use Fungio\GoogleMapBundle\Entity\Marker;
 
 /**
  * Marker entity test.
@@ -22,6 +22,6 @@ class MarkerTest extends \PHPUnit_Framework_TestCase
 {
     public function testInheritance()
     {
-        $this->assertInstanceOf('Ivory\GoogleMap\Overlays\Marker', new Marker());
+        $this->assertInstanceOf('Fungio\GoogleMap\Overlays\Marker', new Marker());
     }
 }

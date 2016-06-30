@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model;
+namespace Fungio\GoogleMapBundle\Tests\Model;
 
-use Ivory\GoogleMap\MapTypeId;
-use Ivory\GoogleMapBundle\Model\Base\BoundBuilder;
-use Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder;
-use Ivory\GoogleMapBundle\Model\MapBuilder;
+use Fungio\GoogleMap\MapTypeId;
+use Fungio\GoogleMapBundle\Model\Base\BoundBuilder;
+use Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder;
+use Fungio\GoogleMapBundle\Model\MapBuilder;
 
 /**
  * Map builder test.
@@ -23,13 +23,13 @@ use Ivory\GoogleMapBundle\Model\MapBuilder;
  */
 class MapBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\MapBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\MapBuilder */
     protected $mapBuilder;
 
-    /** @var \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder */
     protected $coordinateBuilder;
 
-    /** @var \Ivory\GoogleMapBundle\Model\Base\BoundBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Base\BoundBuilder */
     protected $boundBuilder;
 
     /**
@@ -37,9 +37,9 @@ class MapBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->coordinateBuilder = new CoordinateBuilder('Ivory\GoogleMap\Base\Coordinate');
-        $this->boundBuilder = new BoundBuilder('Ivory\GoogleMap\Base\Bound', $this->coordinateBuilder);
-        $this->mapBuilder = new MapBuilder('Ivory\GoogleMap\Map', $this->coordinateBuilder, $this->boundBuilder);
+        $this->coordinateBuilder = new CoordinateBuilder('Fungio\GoogleMap\Base\Coordinate');
+        $this->boundBuilder = new BoundBuilder('Fungio\GoogleMap\Base\Bound', $this->coordinateBuilder);
+        $this->mapBuilder = new MapBuilder('Fungio\GoogleMap\Map', $this->coordinateBuilder, $this->boundBuilder);
     }
 
     /**
@@ -54,7 +54,7 @@ class MapBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testInitialState()
     {
-        $this->assertSame('Ivory\GoogleMap\Map', $this->mapBuilder->getClass());
+        $this->assertSame('Fungio\GoogleMap\Map', $this->mapBuilder->getClass());
         $this->assertSame($this->boundBuilder, $this->mapBuilder->getBoundBuilder());
         $this->assertSame($this->coordinateBuilder, $this->mapBuilder->getCoordinateBuilder());
         $this->assertNull($this->mapBuilder->getPrefixJavascriptVariable());

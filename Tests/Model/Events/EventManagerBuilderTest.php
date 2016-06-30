@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Events;
+namespace Fungio\GoogleMapBundle\Tests\Model\Events;
 
-use Ivory\GoogleMapBundle\Model\Events\EventBuilder;
-use Ivory\GoogleMapBundle\Model\Events\EventManagerBuilder;
+use Fungio\GoogleMapBundle\Model\Events\EventBuilder;
+use Fungio\GoogleMapBundle\Model\Events\EventManagerBuilder;
 
 /**
  * Event manager builder test.
@@ -21,10 +21,10 @@ use Ivory\GoogleMapBundle\Model\Events\EventManagerBuilder;
  */
 class EventManagerBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Events\EventManagerBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Events\EventManagerBuilder */
     protected $eventManagerBuilder;
 
-    /** @var \Ivory\GoogleMapBundle\Model\Events\EventBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Events\EventBuilder */
     protected $eventBuilder;
 
     /**
@@ -32,8 +32,8 @@ class EventManagerBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->eventBuilder = new EventBuilder('Ivory\GoogleMap\Events\Event');
-        $this->eventManagerBuilder = new EventManagerBuilder('Ivory\GoogleMap\Events\EventManager');
+        $this->eventBuilder = new EventBuilder('Fungio\GoogleMap\Events\Event');
+        $this->eventManagerBuilder = new EventManagerBuilder('Fungio\GoogleMap\Events\EventManager');
     }
 
     /**
@@ -47,7 +47,7 @@ class EventManagerBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testInitialState()
     {
-        $this->assertSame('Ivory\GoogleMap\Events\EventManager', $this->eventManagerBuilder->getClass());
+        $this->assertSame('Fungio\GoogleMap\Events\EventManager', $this->eventManagerBuilder->getClass());
         $this->assertEmpty($this->eventManagerBuilder->getDomEvents());
         $this->assertEmpty($this->eventManagerBuilder->getDomEventsOnce());
         $this->assertEmpty($this->eventManagerBuilder->getEvents());

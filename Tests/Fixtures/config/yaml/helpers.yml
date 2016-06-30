@@ -1,67 +1,67 @@
-ivory_google_map:
+fungio_google_map:
     api:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\ApiHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\ApiHelper"
     map:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\MapHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\MapHelper"
     map_type_id:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\MapTypeIdHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\MapTypeIdHelper"
     coordinate:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Base\\CoordinateHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Base\\CoordinateHelper"
     bound:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Base\\BoundHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Base\\BoundHelper"
     point:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Base\\PointHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Base\\PointHelper"
     size:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Base\\SizeHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Base\\SizeHelper"
     control_position:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Controls\\ControlPositionHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Controls\\ControlPositionHelper"
     map_type_control:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Controls\\MapTypeControlHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Controls\\MapTypeControlHelper"
     map_type_control_style:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Controls\\MapTypeControlStyleHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Controls\\MapTypeControlStyleHelper"
     overview_map_control:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Controls\\OverviewMapControlHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Controls\\OverviewMapControlHelper"
     pan_control:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Controls\\PanControlHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Controls\\PanControlHelper"
     rotate_control:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Controls\\RotateControlHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Controls\\RotateControlHelper"
     scale_control:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Controls\\ScaleControlHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Controls\\ScaleControlHelper"
     scale_control_style:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Controls\\ScaleControlStyleHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Controls\\ScaleControlStyleHelper"
     street_view_control:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Controls\\StreetViewControlHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Controls\\StreetViewControlHelper"
     zoom_control:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Controls\\ZoomControlHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Controls\\ZoomControlHelper"
     zoom_control_style:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Controls\\ZoomControlStyleHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Controls\\ZoomControlStyleHelper"
     animation:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\AnimationHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\AnimationHelper"
     circle:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\CircleHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\CircleHelper"
     encoded_polyline:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\EncodedPolylineHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\EncodedPolylineHelper"
     ground_overlay:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\GroundOverlayHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\GroundOverlayHelper"
     info_window:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\InfoWindowHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\InfoWindowHelper"
     marker_cluster:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\MarkerClusterHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\MarkerClusterHelper"
     marker:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\MarkerHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\MarkerHelper"
     marker_image:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\MarkerImageHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\MarkerImageHelper"
     marker_shape:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\MarkerShapeHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\MarkerShapeHelper"
     polygon:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\PolygonHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\PolygonHelper"
     polyline:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\PolylineHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\PolylineHelper"
     rectangle:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\RectangleHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Overlays\\RectangleHelper"
     kml_layer:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Layers\\KMLLayerHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Layers\\KMLLayerHelper"
     event_manager:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Events\\EventManagerHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Events\\EventManagerHelper"
     encoding:
-        helper_class: "Ivory\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Geometry\\EncodingHelper"
+        helper_class: "Fungio\\GoogleMapBundle\\Tests\\Fixtures\\Model\\Helper\\Geometry\\EncodingHelper"

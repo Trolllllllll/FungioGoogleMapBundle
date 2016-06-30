@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map package.
+ * This file is part of the Fungio Google Map package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper;
+namespace Fungio\GoogleMapBundle\Tests\Fixtures\Model\Helper;
 
-use Ivory\GoogleMap\Helper\ApiHelper as BaseApiHelper;
+use Fungio\GoogleMap\Helper\ApiHelper as BaseApiHelper;
 
 /**
  * Api helper for testing.

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Events;
+namespace Fungio\GoogleMapBundle\Model\Events;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Fungio\GoogleMapBundle\Model\AbstractBuilder;
 
 /**
  * Event manager builder.
@@ -57,7 +57,7 @@ class EventManagerBuilder extends AbstractBuilder
      *
      * @param array $domEvents The dom events.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Events\EventManagerBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Events\EventManagerBuilder The builder.
      */
     public function setDomEvents(array $domEvents)
     {
@@ -81,7 +81,7 @@ class EventManagerBuilder extends AbstractBuilder
      *
      * @param array $domEventsOnce The dom events once.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Events\EventManagerBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Events\EventManagerBuilder The builder.
      */
     public function setDomEventsOnce(array $domEventsOnce)
     {
@@ -105,7 +105,7 @@ class EventManagerBuilder extends AbstractBuilder
      *
      * @param array $events The events.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Events\EventManagerBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Events\EventManagerBuilder The builder.
      */
     public function setEvents(array $events)
     {
@@ -129,7 +129,7 @@ class EventManagerBuilder extends AbstractBuilder
      *
      * @param array $eventsOnce The events once.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Events\EventManagerBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Events\EventManagerBuilder The builder.
      */
     public function setEventsOnce(array $eventsOnce)
     {
@@ -154,7 +154,7 @@ class EventManagerBuilder extends AbstractBuilder
     /**
      * {@inheritdoc}
      *
-     * @return \Ivory\GoogleMap\Events\EventManager The event manager.
+     * @return \Fungio\GoogleMap\Events\EventManager The event manager.
      */
     public function build()
     {

@@ -1,7 +1,7 @@
-# Ivory Geocoder
+# Fungio Geocoder
 
-Warning, if you want to use the Ivory Geocoder, you need to use the default configuration or at least, the Ivory
-Geocoder & the Ivory Provider.
+Warning, if you want to use the Fungio Geocoder, you need to use the default configuration or at least, the Fungio
+Geocoder & the Fungio Provider.
 
 ## Geocode a position
 
@@ -10,15 +10,15 @@ map geocoding API by two different ways. You have the choice between a simple ad
 geocoder request.
 
 If you want to use it with a business account, you can read this
-[documentation](http://github.com/egeloen/IvoryGoogleMapBundle/blob/master/Resources/doc/usage/services/business_account.md).
+[documentation](http://github.com/fungio/FungioGoogleMapBundle/blob/master/Resources/doc/usage/services/business_account.md).
 
 ### Simple address
 
 ``` php
 <?php
 
-// Requests the ivory google map geocoder service
-$geocoder = $this->get('ivory_google_map.geocoder');
+// Requests the fungio google map geocoder service
+$geocoder = $this->get('fungio_google_map.geocoder');
 
 // Geocode an address
 $response = $geocoder->geocode('1600 Amphitheatre Parkway, Mountain View, CA');
@@ -27,16 +27,16 @@ $response = $geocoder->geocode('1600 Amphitheatre Parkway, Mountain View, CA');
 ### Advanced geocoder request
 
 If you want to build an advanced request, read this specific
-[documenation](http://github.com/egeloen/IvoryGoogleMapBundle/blob/master/Resources/doc/usage/services/geocoding/geocoder_request.md).
+[documenation](http://github.com/fungio/FungioGoogleMapBundle/blob/master/Resources/doc/usage/services/geocoding/geocoder_request.md).
 
 ## Geocoder response
 
-When you have requested your position, the returned object is an ``Ivory\GoogleMap\Services\Geocoding\GeocoderResponse``.
+When you have requested your position, the returned object is an ``Fungio\GoogleMap\Services\Geocoding\GeocoderResponse``.
 It wraps a geocoder status & geocoder results.
 
 ### Geocoder status
 
-The available status are defined by the ``Ivory\GoogleMap\Services\Geocoding\GeocoderStatus`` constants.
+The available status are defined by the ``Fungio\GoogleMap\Services\Geocoding\GeocoderStatus`` constants.
 
 ``` php
 <?php
@@ -48,7 +48,7 @@ $status = $response->getStatus();
 ### Geocoder results
 
 A request can return many results. The geocoder response wraps an array of
-``Ivory\GoogleMap\Services\Geocoding\GeocoderResult``.
+``Fungio\GoogleMap\Services\Geocoding\GeocoderResult``.
 
 ``` php
 <?php
@@ -127,13 +127,13 @@ foreach ($results as $result) {
 
 Geometry contains the following information:
 
-   - location which is an ``Ivory\GoogleMap\Base\Coordinate``.
+   - location which is an ``Fungio\GoogleMap\Base\Coordinate``.
    - location type stores additional data about the specified location. The available possibilites are describes by the
-     ``Ivory\GoogleMap\Services\Geocoding\GeocoderLocationType`` constants.
+     ``Fungio\GoogleMap\Services\Geocoding\GeocoderLocationType`` constants.
    - viewport which contains the recommended viewport for displaying the returned result, specified as
-     ``Ivory\GoogleMap\Base\Bound``.
+     ``Fungio\GoogleMap\Base\Bound``.
    - bounds (optionally returned) which stores the bounding box which can fully contain the returned result, specified
-     as ``Ivory\GoogleMap\Base\Bound``. Note that these bounds may not match the recommended viewport.
+     as ``Fungio\GoogleMap\Base\Bound``. Note that these bounds may not match the recommended viewport.
 
 ``` php
 <?php
@@ -189,18 +189,18 @@ foreach($results as $result)
 <?php
 
 // Request the geocoder service
-$this->get('ivory_google_map.geocoder');
+$this->get('fungio_google_map.geocoder');
 
 // Geocode a location
 $response = $this->geocode('1600 Amphitheatre Parkway, Mountain View, CA');
 
 // Request the google map service
-$map = $this->get('ivory_google_map.map');
+$map = $this->get('fungio_google_map.map');
 
 foreach($response->getResults() as $result)
 {
     // Request the google map merker service
-    $marker = $this->get('ivory_google_map.marker');
+    $marker = $this->get('fungio_google_map.marker');
 
     // Position the marker
     $marker->setPosition($result->getGeometry()->getLocation());

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Twig;
+namespace Fungio\GoogleMapBundle\Tests\Twig;
 
-use Ivory\GoogleMapBundle\Twig\GoogleMapExtension;
+use Fungio\GoogleMapBundle\Twig\GoogleMapExtension;
 
 /**
  * Google map extension test.
@@ -23,7 +23,7 @@ class GoogleMapExtensionTest extends \PHPUnit_Framework_TestCase
     /** @var \Twig_Environment */
     protected $twig;
 
-    /** @var \Ivory\GoogleMapBundle\Helper\TemplateHelper */
+    /** @var \Fungio\GoogleMapBundle\Helper\TemplateHelper */
     protected $templateHelperMock;
 
     /**
@@ -31,7 +31,7 @@ class GoogleMapExtensionTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->templateHelperMock = $this->getMockBuilder('Ivory\GoogleMapBundle\Helper\TemplateHelper')
+        $this->templateHelperMock = $this->getMockBuilder('Fungio\GoogleMapBundle\Helper\TemplateHelper')
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -103,10 +103,10 @@ class GoogleMapExtensionTest extends \PHPUnit_Framework_TestCase
     /**
      * Creates a map.
      *
-     * @return \Ivory\GoogleMap\Map The map.
+     * @return \Fungio\GoogleMap\Map The map.
      */
     protected function createMap()
     {
-        return $this->getMock('Ivory\GoogleMap\Map');
+        return $this->getMock('Fungio\GoogleMap\Map');
     }
 }

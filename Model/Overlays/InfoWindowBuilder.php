@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Overlays;
+namespace Fungio\GoogleMapBundle\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
-use Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder;
-use Ivory\GoogleMapBundle\Model\Base\SizeBuilder;
+use Fungio\GoogleMapBundle\Model\AbstractBuilder;
+use Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder;
+use Fungio\GoogleMapBundle\Model\Base\SizeBuilder;
 
 /**
  * Info window builder.
@@ -22,10 +22,10 @@ use Ivory\GoogleMapBundle\Model\Base\SizeBuilder;
  */
 class InfoWindowBuilder extends AbstractBuilder
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder */
     protected $coordinateBuilder;
 
-    /** @var \Ivory\GoogleMapBundle\Model\Base\SizeBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Base\SizeBuilder */
     protected $sizeBuilder;
 
     /** @var string */
@@ -59,8 +59,8 @@ class InfoWindowBuilder extends AbstractBuilder
      * Creates an info window builder.
      *
      * @param string                                              $class             The class to build.
-     * @param \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder $coordinateBuilder The coordinate builder.
-     * @param \Ivory\GoogleMapBundle\Model\Base\SizeBuilder       $sizeBuilder       The size builder.
+     * @param \Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder $coordinateBuilder The coordinate builder.
+     * @param \Fungio\GoogleMapBundle\Model\Base\SizeBuilder       $sizeBuilder       The size builder.
      */
     public function __construct($class, CoordinateBuilder $coordinateBuilder, SizeBuilder $sizeBuilder)
     {
@@ -84,9 +84,9 @@ class InfoWindowBuilder extends AbstractBuilder
     /**
      * Sets the coordinate builder.
      *
-     * @param \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder $coordinateBuilder The coordinate builder.
+     * @param \Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder $coordinateBuilder The coordinate builder.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\InfoWindowBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\InfoWindowBuilder The builder.
      */
     public function setCoordinateBuilder(CoordinateBuilder $coordinateBuilder)
     {
@@ -108,9 +108,9 @@ class InfoWindowBuilder extends AbstractBuilder
     /**
      * Sets the size builder.
      *
-     * @param \Ivory\GoogleMapBundle\Model\Base\SizeBuilder $sizeBuilder The size builder.
+     * @param \Fungio\GoogleMapBundle\Model\Base\SizeBuilder $sizeBuilder The size builder.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\InfoWindowBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\InfoWindowBuilder The builder.
      */
     public function setSizeBuilder(SizeBuilder $sizeBuilder)
     {
@@ -134,7 +134,7 @@ class InfoWindowBuilder extends AbstractBuilder
      *
      * @param string $prefixJavascriptVariable The prefix javascript variable.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\InfoWindowBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\InfoWindowBuilder The builder.
      */
     public function setPrefixJavascriptVariable($prefixJavascriptVariable)
     {
@@ -158,7 +158,7 @@ class InfoWindowBuilder extends AbstractBuilder
      *
      * @param string $content The content.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\InfoWindowBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\InfoWindowBuilder The builder.
      */
     public function setContent($content)
     {
@@ -184,7 +184,7 @@ class InfoWindowBuilder extends AbstractBuilder
      * @param double  $longitude The position longitude.
      * @param boolean $noWrap    The position no wrap.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\InfoWindowBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\InfoWindowBuilder The builder.
      */
     public function setPosition($latitude, $longitude, $noWrap = true)
     {
@@ -211,7 +211,7 @@ class InfoWindowBuilder extends AbstractBuilder
      * @param string $widthUnit  The pixel offset width unit.
      * @param string $heightUnit The pixel offset height unit.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\InfoWindowBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\InfoWindowBuilder The builder.
      */
     public function setPixelOffset($width, $height, $widthUnit = null, $heightUnit = null)
     {
@@ -235,7 +235,7 @@ class InfoWindowBuilder extends AbstractBuilder
      *
      * @param boolean $open TRUE if it is open else FALSE.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\InfoWindowBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\InfoWindowBuilder The builder.
      */
     public function setOpen($open)
     {
@@ -259,7 +259,7 @@ class InfoWindowBuilder extends AbstractBuilder
      *
      * @param string $openEvent The open event.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\InfoWindowBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\InfoWindowBuilder The builder.
      */
     public function setOpenEvent($openEvent)
     {
@@ -283,7 +283,7 @@ class InfoWindowBuilder extends AbstractBuilder
      *
      * @param boolean $autoOpen TRUE if it auto opens else FALSE.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\InfoWindowBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\InfoWindowBuilder The builder.
      */
     public function setAutoOpen($autoOpen)
     {
@@ -307,7 +307,7 @@ class InfoWindowBuilder extends AbstractBuilder
      *
      * @param boolean $autoClose TRUE if it auto closes else FALSE.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\InfoWindowBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\InfoWindowBuilder The builder.
      */
     public function setAutoClose($autoClose)
     {
@@ -331,7 +331,7 @@ class InfoWindowBuilder extends AbstractBuilder
      *
      * @param array $options The options.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\InfoWindowBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\InfoWindowBuilder The builder.
      */
     public function setOptions(array $options)
     {
@@ -364,7 +364,7 @@ class InfoWindowBuilder extends AbstractBuilder
     /**
      * {@inheritdoc}
      *
-     * @return \Ivory\GoogleMap\Overlays\InfoWindow The info window.
+     * @return \Fungio\GoogleMap\Overlays\InfoWindow The info window.
      */
     public function build()
     {

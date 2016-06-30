@@ -1,4 +1,4 @@
-ivory_google_map:
+fungio_google_map:
     info_window:
         prefix_javascript_variable: "iw"
         position:

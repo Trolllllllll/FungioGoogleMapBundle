@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Overlays;
+namespace Fungio\GoogleMapBundle\Tests\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder;
-use Ivory\GoogleMapBundle\Model\Base\BoundBuilder;
-use Ivory\GoogleMapBundle\Model\Overlays\RectangleBuilder;
+use Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder;
+use Fungio\GoogleMapBundle\Model\Base\BoundBuilder;
+use Fungio\GoogleMapBundle\Model\Overlays\RectangleBuilder;
 
 /**
  * Rectangle builder test.
@@ -22,10 +22,10 @@ use Ivory\GoogleMapBundle\Model\Overlays\RectangleBuilder;
  */
 class RectangleBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Overlays\RectangleBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Overlays\RectangleBuilder */
     protected $rectangleBuilder;
 
-    /** @var \Ivory\GoogleMapBundle\Model\Base\BoundBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Base\BoundBuilder */
     protected $boundBuilder;
 
     /**
@@ -34,11 +34,11 @@ class RectangleBuilderTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         $this->boundBuilder = new BoundBuilder(
-            'Ivory\GoogleMap\Base\Bound',
-            new CoordinateBuilder('Ivory\GoogleMap\Base\Coordinate')
+            'Fungio\GoogleMap\Base\Bound',
+            new CoordinateBuilder('Fungio\GoogleMap\Base\Coordinate')
         );
 
-        $this->rectangleBuilder = new RectangleBuilder('Ivory\GoogleMap\Overlays\Rectangle', $this->boundBuilder);
+        $this->rectangleBuilder = new RectangleBuilder('Fungio\GoogleMap\Overlays\Rectangle', $this->boundBuilder);
     }
 
     /**
@@ -52,7 +52,7 @@ class RectangleBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testInitialState()
     {
-        $this->assertSame('Ivory\GoogleMap\Overlays\Rectangle', $this->rectangleBuilder->getClass());
+        $this->assertSame('Fungio\GoogleMap\Overlays\Rectangle', $this->rectangleBuilder->getClass());
         $this->assertSame($this->boundBuilder, $this->rectangleBuilder->getBoundBuilder());
         $this->assertNull($this->boundBuilder->getPrefixJavascriptVariable());
         $this->assertEmpty($this->rectangleBuilder->getBound());

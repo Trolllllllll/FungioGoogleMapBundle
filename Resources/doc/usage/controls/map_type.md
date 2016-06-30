@@ -8,13 +8,13 @@ default in the top right corner of the map.
 ### By configuration file
 
 By default, the bundle doesn't need any configuration. Most of the service have a default configuration which allows
-you to use the given objects like they are. The ``ivory_google_map.map_type_control`` service is. The configuration
+you to use the given objects like they are. The ``fungio_google_map.map_type_control`` service is. The configuration
 describes below is this default configuration.
 
 ```yaml
 # app/config/config.yml
 
-ivory_google_map:
+fungio_google_map:
     map_type_control:
         # You own map type control class
         class: "My\Fucking\MapTypeControl"
@@ -42,11 +42,11 @@ ivory_google_map:
 ``` php
 <?php
 
-// Requests the ivory google map type control service
-$mapTypeControl = $this->get('ivory_google_map.map_type_control');
+// Requests the fungio google map type control service
+$mapTypeControl = $this->get('fungio_google_map.map_type_control');
 ```
 
 ### By coding
 
 If you want to lean more, you can read
-[this documentation](https://github.com/egeloen/ivory-google-map/blob/master/doc/usage/controls/map_type.md).
+[this documentation](https://github.com/fungio/fungio-google-map/blob/master/doc/usage/controls/map_type.md).

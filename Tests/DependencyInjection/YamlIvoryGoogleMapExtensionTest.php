@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\DependencyInjection;
+namespace Fungio\GoogleMapBundle\Tests\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 /**
- * Yaml Ivory Google Map extension test.
+ * Yaml Fungio Google Map extension test.
  *
  * @author GeLo <geloen.eric@gmail.com>
  */
-class YamlIvoryGoogleMapExtensionTest extends AbstractIvoryGoogleMapExtensionTest
+class YamlFungioGoogleMapExtensionTest extends AbstractFungioGoogleMapExtensionTest
 {
     /**
      * {@inheritdoc}

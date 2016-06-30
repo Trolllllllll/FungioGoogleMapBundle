@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Controls;
+namespace Fungio\GoogleMapBundle\Tests\Model\Controls;
 
-use Ivory\GoogleMap\Controls\ControlPosition;
-use Ivory\GoogleMap\Controls\ScaleControlStyle;
-use Ivory\GoogleMapBundle\Model\Controls\ScaleControlBuilder;
+use Fungio\GoogleMap\Controls\ControlPosition;
+use Fungio\GoogleMap\Controls\ScaleControlStyle;
+use Fungio\GoogleMapBundle\Model\Controls\ScaleControlBuilder;
 
 /**
  * Scale control builder test.
@@ -22,7 +22,7 @@ use Ivory\GoogleMapBundle\Model\Controls\ScaleControlBuilder;
  */
 class ScaleControlBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Controls\ScaleControlBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Controls\ScaleControlBuilder */
     protected $scaleControlBuilder;
 
     /**
@@ -30,7 +30,7 @@ class ScaleControlBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->scaleControlBuilder = new ScaleControlBuilder('Ivory\GoogleMap\Controls\ScaleControl');
+        $this->scaleControlBuilder = new ScaleControlBuilder('Fungio\GoogleMap\Controls\ScaleControl');
     }
 
     /**
@@ -43,7 +43,7 @@ class ScaleControlBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testInitialState()
     {
-        $this->assertSame('Ivory\GoogleMap\Controls\ScaleControl', $this->scaleControlBuilder->getClass());
+        $this->assertSame('Fungio\GoogleMap\Controls\ScaleControl', $this->scaleControlBuilder->getClass());
         $this->assertNull($this->scaleControlBuilder->getControlPosition());
     }
 

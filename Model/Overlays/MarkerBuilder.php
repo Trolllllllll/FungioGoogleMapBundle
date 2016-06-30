@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Overlays;
+namespace Fungio\GoogleMapBundle\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
-use Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder;
+use Fungio\GoogleMapBundle\Model\AbstractBuilder;
+use Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder;
 
 /**
  * Marker builder.
@@ -21,7 +21,7 @@ use Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder;
  */
 class MarkerBuilder extends AbstractBuilder
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder */
     protected $coordinateBuilder;
 
     /** @var string */
@@ -40,7 +40,7 @@ class MarkerBuilder extends AbstractBuilder
      * Creates a marker builder.
      *
      * @param string                                              $class             The class to build.
-     * @param \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder $coordinateBuilder The coordinate builder.
+     * @param \Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder $coordinateBuilder The coordinate builder.
      */
     public function __construct($class, CoordinateBuilder $coordinateBuilder)
     {
@@ -53,7 +53,7 @@ class MarkerBuilder extends AbstractBuilder
     /**
      * Gets the coordinate builder.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder The coordinate builder.
+     * @return \Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder The coordinate builder.
      */
     public function getCoordinateBuilder()
     {
@@ -63,9 +63,9 @@ class MarkerBuilder extends AbstractBuilder
     /**
      * Sets the coordinate builder.
      *
-     * @param \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder $coordinateBuilder The coordinate builder.
+     * @param \Fungio\GoogleMapBundle\Model\Base\CoordinateBuilder $coordinateBuilder The coordinate builder.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Layers\MarkerBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Layers\MarkerBuilder The builder.
      */
     public function setCoordinateBuilder(CoordinateBuilder $coordinateBuilder)
     {
@@ -89,7 +89,7 @@ class MarkerBuilder extends AbstractBuilder
      *
      * @param string $prefixJavascriptVariable The prefix javascript variable.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Layers\MarkerBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Layers\MarkerBuilder The builder.
      */
     public function setPrefixJavascriptVariable($prefixJavascriptVariable)
     {
@@ -115,7 +115,7 @@ class MarkerBuilder extends AbstractBuilder
      * @param double  $longitude The longitude.
      * @param boolean $noWrap    The no wrap.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Layers\MarkerBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Layers\MarkerBuilder The builder.
      */
     public function setPosition($latitude, $longtitude, $noWrap = true)
     {
@@ -139,7 +139,7 @@ class MarkerBuilder extends AbstractBuilder
      *
      * @param string $animation The animation.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Layers\MarkerBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Layers\MarkerBuilder The builder.
      */
     public function setAnimation($animation)
     {
@@ -163,7 +163,7 @@ class MarkerBuilder extends AbstractBuilder
      *
      * @param array $options The options.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Layers\MarkerBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Layers\MarkerBuilder The builder.
      */
     public function setOptions(array $options)
     {
@@ -190,7 +190,7 @@ class MarkerBuilder extends AbstractBuilder
     /**
      * {@inheritdoc}
      *
-     * @return \Ivory\GoogleMap\Overlays\Marker The marker.
+     * @return \Fungio\GoogleMap\Overlays\Marker The marker.
      */
     public function build()
     {

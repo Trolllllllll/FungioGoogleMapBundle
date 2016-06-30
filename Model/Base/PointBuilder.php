@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Base;
+namespace Fungio\GoogleMapBundle\Model\Base;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Fungio\GoogleMapBundle\Model\AbstractBuilder;
 
 /**
  * Point builder.
@@ -44,7 +44,7 @@ class PointBuilder extends AbstractBuilder
      *
      * @param string $prefixJavascriptVariable The prefix javascript variable.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\PointBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Base\PointBuilder The builder.
      */
     public function setPrefixJavascriptVariable($prefixJavascriptVariable)
     {
@@ -68,7 +68,7 @@ class PointBuilder extends AbstractBuilder
      *
      * @param double $x The X coordinate.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\PointBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Base\PointBuilder The builder.
      */
     public function setX($x)
     {
@@ -92,7 +92,7 @@ class PointBuilder extends AbstractBuilder
      *
      * @param double $y The Y coordinate.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\PointBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Base\PointBuilder The builder.
      */
     public function setY($y)
     {
@@ -116,7 +116,7 @@ class PointBuilder extends AbstractBuilder
     /**
      * {@inheritdoc}
      *
-     * @return \Ivory\GoogleMap\Base\Point The point.
+     * @return \Fungio\GoogleMap\Base\Point The point.
      */
     public function build()
     {

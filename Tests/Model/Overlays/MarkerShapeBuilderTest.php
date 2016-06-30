@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Overlays;
+namespace Fungio\GoogleMapBundle\Tests\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\Overlays\MarkerShapeBuilder;
+use Fungio\GoogleMapBundle\Model\Overlays\MarkerShapeBuilder;
 
 /**
  * Marker shape builder test.
@@ -20,7 +20,7 @@ use Ivory\GoogleMapBundle\Model\Overlays\MarkerShapeBuilder;
  */
 class MarkerShapeBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Overlays\MarkerShapeBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Overlays\MarkerShapeBuilder */
     protected $markerShapeBuilder;
 
     /**
@@ -28,7 +28,7 @@ class MarkerShapeBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->markerShapeBuilder = new MarkerShapeBuilder('Ivory\GoogleMap\Overlays\MarkerShape');
+        $this->markerShapeBuilder = new MarkerShapeBuilder('Fungio\GoogleMap\Overlays\MarkerShape');
     }
 
     /**
@@ -41,7 +41,7 @@ class MarkerShapeBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testInitialState()
     {
-        $this->assertSame('Ivory\GoogleMap\Overlays\MarkerShape', $this->markerShapeBuilder->getClass());
+        $this->assertSame('Fungio\GoogleMap\Overlays\MarkerShape', $this->markerShapeBuilder->getClass());
         $this->assertNull($this->markerShapeBuilder->getPrefixJavascriptVariable());
         $this->assertNull($this->markerShapeBuilder->getType());
         $this->assertEmpty($this->markerShapeBuilder->getCoordinates());

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Entity;
+namespace Fungio\GoogleMapBundle\Tests\Entity;
 
-use Ivory\GoogleMapBundle\Entity\Polyline;
+use Fungio\GoogleMapBundle\Entity\Polyline;
 
 /**
  * Polyline entity test.
@@ -22,6 +22,6 @@ class PolylineTest extends \PHPUnit_Framework_TestCase
 {
     public function testInheritance()
     {
-        $this->assertInstanceOf('Ivory\GoogleMap\Overlays\Polyline', new Polyline());
+        $this->assertInstanceOf('Fungio\GoogleMap\Overlays\Polyline', new Polyline());
     }
 }

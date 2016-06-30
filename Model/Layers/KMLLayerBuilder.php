@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Layers;
+namespace Fungio\GoogleMapBundle\Model\Layers;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Fungio\GoogleMapBundle\Model\AbstractBuilder;
 
 /**
  * KML layer builder.
@@ -54,7 +54,7 @@ class KMLLayerBuilder extends AbstractBuilder
      *
      * @param string $prefixJavascriptVariable The javascript variable.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Layers\KMLLayerBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Layers\KMLLayerBuilder The builder.
      */
     public function setPrefixJavascriptVariable($prefixJavascriptVariable)
     {
@@ -78,7 +78,7 @@ class KMLLayerBuilder extends AbstractBuilder
      *
      * @param string $url The KML layer url.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Layers\KMLLayerBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Layers\KMLLayerBuilder The builder.
      */
     public function setUrl($url)
     {
@@ -102,7 +102,7 @@ class KMLLayerBuilder extends AbstractBuilder
      *
      * @param array $options The options.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Layers\KMLLayerBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Layers\KMLLayerBuilder The builder.
      */
     public function setOptions(array $options)
     {
@@ -126,7 +126,7 @@ class KMLLayerBuilder extends AbstractBuilder
     /**
      * {@inheritdoc}
      *
-     * @return \Ivory\GoogleMap\Layers\KMLLayer The kml layer.
+     * @return \Fungio\GoogleMap\Layers\KMLLayer The kml layer.
      */
     public function build()
     {

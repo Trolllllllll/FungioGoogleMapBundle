@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Controls;
+namespace Fungio\GoogleMapBundle\Model\Controls;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Fungio\GoogleMapBundle\Model\AbstractBuilder;
 
 /**
  * Zoom control builder.
@@ -41,7 +41,7 @@ class ZoomControlBuilder extends AbstractBuilder
      *
      * @param string $controlPosition The control position.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Controls\ZoomControlBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Controls\ZoomControlBuilder The builder.
      */
     public function setControlPosition($controlPosition)
     {
@@ -65,7 +65,7 @@ class ZoomControlBuilder extends AbstractBuilder
      *
      * @param string $zoomControlStyle The zoom control style.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Controls\ZoomControlBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Controls\ZoomControlBuilder The builder.
      */
     public function setZoomControlStyle($zoomControlStyle)
     {
@@ -88,7 +88,7 @@ class ZoomControlBuilder extends AbstractBuilder
     /**
      * {@inheritdoc}
      *
-     * @return \Ivory\GoogleMap\Controls\ZoomControl The zoom control.
+     * @return \Fungio\GoogleMap\Controls\ZoomControl The zoom control.
      */
     public function build()
     {

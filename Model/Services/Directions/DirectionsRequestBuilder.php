@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Services\Directions;
+namespace Fungio\GoogleMapBundle\Model\Services\Directions;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Fungio\GoogleMapBundle\Model\AbstractBuilder;
 
 /**
  * The directions request builder.
@@ -81,7 +81,7 @@ class DirectionsRequestBuilder extends AbstractBuilder
      *
      * @param boolean $avoidHighways TRUE if it avoids highways else FALSE.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
      */
     public function setAvoidHighways($avoidHighways)
     {
@@ -105,7 +105,7 @@ class DirectionsRequestBuilder extends AbstractBuilder
      *
      * @param boolean $avoidTolls TRUE if it avoids tolls else FALSE.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
      */
     public function setAvoidTolls($avoidTolls)
     {
@@ -129,7 +129,7 @@ class DirectionsRequestBuilder extends AbstractBuilder
      *
      * @param string $destination The destination.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
      */
     public function setDestination($destination)
     {
@@ -153,7 +153,7 @@ class DirectionsRequestBuilder extends AbstractBuilder
      *
      * @param boolean $optimizeWaypoints TRUE if it optimizes waypoints else FALSE.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
      */
     public function setOptimizeWaypoints($optimizeWaypoints)
     {
@@ -177,7 +177,7 @@ class DirectionsRequestBuilder extends AbstractBuilder
      *
      * @param string $origin The origin.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
      */
     public function setOrigin($origin)
     {
@@ -201,7 +201,7 @@ class DirectionsRequestBuilder extends AbstractBuilder
      *
      * @param boolean $provideRouteAlternatives TRUE if it provides route alternatives else FALSE.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
      */
     public function setProvideRouteAlternatives($provideRouteAlternatives)
     {
@@ -225,7 +225,7 @@ class DirectionsRequestBuilder extends AbstractBuilder
      *
      * @param string $region The region.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
      */
     public function setRegion($region)
     {
@@ -249,7 +249,7 @@ class DirectionsRequestBuilder extends AbstractBuilder
      *
      * @param string $language The language.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
      */
     public function setLanguage($language)
     {
@@ -273,7 +273,7 @@ class DirectionsRequestBuilder extends AbstractBuilder
      *
      * @param string $travelMode The travel mode.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
      */
     public function setTravelMode($travelMode)
     {
@@ -297,7 +297,7 @@ class DirectionsRequestBuilder extends AbstractBuilder
      *
      * @param string $unitSystem The unit system.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
      */
     public function setUnitSystem($unitSystem)
     {
@@ -321,7 +321,7 @@ class DirectionsRequestBuilder extends AbstractBuilder
      *
      * @param array $waypoints The waypoints.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
      */
     public function setWaypoints(array $waypoints)
     {
@@ -345,7 +345,7 @@ class DirectionsRequestBuilder extends AbstractBuilder
      *
      * @param boolean $sensor The sensor.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder The builder.
      */
     public function setSensor($sensor)
     {
@@ -378,7 +378,7 @@ class DirectionsRequestBuilder extends AbstractBuilder
     /**
      * {@inheritdoc}
      *
-     * @return \Ivory\GoogleMap\Services\Directions\DirectionsRequest The directions request.
+     * @return \Fungio\GoogleMap\Services\Directions\DirectionsRequest The directions request.
      */
     public function build()
     {

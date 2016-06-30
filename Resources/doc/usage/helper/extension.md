@@ -8,8 +8,8 @@ First, you need to create your own extension:
 ``` php
 namespace My\Own\Helper\Extension;
 
-use Ivory\GoogleMap\Helper\Extension\ExtensionHelperInterface;
-use Ivory\GoogleMap\Map;
+use Fungio\GoogleMap\Helper\Extension\ExtensionHelperInterface;
+use Fungio\GoogleMap\Map;
 
 class MyExtensionHelper implements ExtensionHelperInterface
 {
@@ -54,7 +54,7 @@ services:
 When your service (extension) is well registered in the container, you just need to configure it:
 
 ``` yaml
-ivory_google_map:
+fungio_google_map:
     extensions:
         my_extension: my.own.extension_helper
 ```

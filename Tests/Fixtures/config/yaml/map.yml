@@ -1,4 +1,4 @@
-ivory_google_map:
+fungio_google_map:
     map:
         prefix_javascript_variable: "foo"
         html_container:             "bar"

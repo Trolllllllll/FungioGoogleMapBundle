@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Overlays;
+namespace Fungio\GoogleMapBundle\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Fungio\GoogleMapBundle\Model\AbstractBuilder;
 
 /**
  * Marker shape builder.
@@ -54,7 +54,7 @@ class MarkerShapeBuilder extends AbstractBuilder
      *
      * @param string $prefixJavascriptVariable The prefix javascript variable.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\MarkerShapeBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\MarkerShapeBuilder The builder.
      */
     public function setPrefixJavascriptVariable($prefixJavascriptVariable)
     {
@@ -78,7 +78,7 @@ class MarkerShapeBuilder extends AbstractBuilder
      *
      * @param string $type The type.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\MarkerShapeBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\MarkerShapeBuilder The builder.
      */
     public function setType($type)
     {
@@ -102,7 +102,7 @@ class MarkerShapeBuilder extends AbstractBuilder
      *
      * @param array $coordinates The coordinates.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\MarkerShapeBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Overlays\MarkerShapeBuilder The builder.
      */
     public function setCoordinates(array $coordinates)
     {
@@ -126,7 +126,7 @@ class MarkerShapeBuilder extends AbstractBuilder
     /**
      * {@inheritdoc}
      *
-     * @return \Ivory\GoogleMap\Overlays\MarkerShape The marker shape.
+     * @return \Fungio\GoogleMap\Overlays\MarkerShape The marker shape.
      */
     public function build()
     {

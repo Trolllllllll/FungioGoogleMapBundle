@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Form\Type;
+namespace Fungio\GoogleMapBundle\Tests\Form\Type;
 
-use Ivory\GoogleMap\Places\AutocompleteComponentRestriction;
-use Ivory\GoogleMap\Places\AutocompleteType;
-use Ivory\GoogleMapBundle\Form\Type\PlacesAutocompleteType;
+use Fungio\GoogleMap\Places\AutocompleteComponentRestriction;
+use Fungio\GoogleMap\Places\AutocompleteType;
+use Fungio\GoogleMapBundle\Form\Type\PlacesAutocompleteType;
 use Symfony\Component\Form\Forms;
 
 /**
@@ -26,10 +26,10 @@ class PlacesAutocompleteTypeTest extends \PHPUnit_Framework_TestCase
     /** @var \Symfony\Component\Form\FormFactoryInterface */
     protected $factory;
 
-    /** @var \Ivory\GoogleMapBundle\Form\Type\PlacesAutocompleteType */
+    /** @var \Fungio\GoogleMapBundle\Form\Type\PlacesAutocompleteType */
     protected $placesAutocompleteType;
 
-    /** @var \Ivory\GoogleMap\Helper\Places\AutocompleteHelper */
+    /** @var \Fungio\GoogleMap\Helper\Places\AutocompleteHelper */
     protected $placesAutocompleteHelperMock;
 
     /** @var \Symfony\Component\HttpFoundation\Request */
@@ -40,7 +40,7 @@ class PlacesAutocompleteTypeTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->placesAutocompleteHelperMock = $this->getMockBuilder('Ivory\GoogleMap\Helper\Places\AutocompleteHelper')
+        $this->placesAutocompleteHelperMock = $this->getMockBuilder('Fungio\GoogleMap\Helper\Places\AutocompleteHelper')
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -99,7 +99,7 @@ class PlacesAutocompleteTypeTest extends \PHPUnit_Framework_TestCase
 
     public function testBoundConfigWithBound()
     {
-        $boundMock = $this->getMock('Ivory\GoogleMap\Base\Bound');
+        $boundMock = $this->getMock('Fungio\GoogleMap\Base\Bound');
 
         $form = $this->factory->create('places_autocomplete', null, array('bound' => $boundMock));
         $autocomplete = $form->getConfig()->getAttribute('autocomplete');

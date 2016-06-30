@@ -5,11 +5,11 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd"
 >
     <parameters>
-        <parameter key="ivory_google_map.helper.api.class">Ivory\GoogleMap\Helper\ApiHelper</parameter>
+        <parameter key="fungio_google_map.helper.api.class">Fungio\GoogleMap\Helper\ApiHelper</parameter>
     </parameters>
 
     <services>
         <!-- Map API service -->
-        <service id="ivory_google_map.helper.api" class="%ivory_google_map.helper.api.class%" public="false" />
+        <service id="fungio_google_map.helper.api" class="%fungio_google_map.helper.api.class%" public="false" />
     </services>
 </container>

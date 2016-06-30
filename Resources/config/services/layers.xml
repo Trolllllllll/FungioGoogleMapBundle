@@ -5,28 +5,28 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd"
 >
     <parameters>
-        <parameter key="ivory_google_map.kml_layer.class">Ivory\GoogleMap\Layers\KMLLayer</parameter>
-        <parameter key="ivory_google_map.kml_layer.builder.class">Ivory\GoogleMapBundle\Model\Layers\KMLLayerBuilder</parameter>
-        <parameter key="ivory_google_map.kml_layer.helper.class">Ivory\GoogleMap\Helper\Layers\KMLLayerHelper</parameter>
+        <parameter key="fungio_google_map.kml_layer.class">Fungio\GoogleMap\Layers\KMLLayer</parameter>
+        <parameter key="fungio_google_map.kml_layer.builder.class">Fungio\GoogleMapBundle\Model\Layers\KMLLayerBuilder</parameter>
+        <parameter key="fungio_google_map.kml_layer.helper.class">Fungio\GoogleMap\Helper\Layers\KMLLayerHelper</parameter>
     </parameters>
 
     <services>
         <!-- KML Layer service -->
         <service
-            id="ivory_google_map.kml_layer"
-            class="%ivory_google_map.kml_layer.class%"
-            factory-service="ivory_google_map.kml_layer.builder"
-            factory-method="build"
-            scope="prototype"
-        />
+            id="fungio_google_map.kml_layer"
+            class="%fungio_google_map.kml_layer.class%"
+        >
+            <!--scope="prototype"-->
+            <factory service="fungio_google_map.kml_layer.builder" method="build" />
+        </service>
 
-        <service id="ivory_google_map.kml_layer.builder" class="%ivory_google_map.kml_layer.builder.class%">
-            <argument>%ivory_google_map.kml_layer.class%</argument>
+        <service id="fungio_google_map.kml_layer.builder" class="%fungio_google_map.kml_layer.builder.class%">
+            <argument>%fungio_google_map.kml_layer.class%</argument>
         </service>
 
         <service
-            id="ivory_google_map.helper.kml_layer"
-            class="%ivory_google_map.kml_layer.helper.class%"
+            id="fungio_google_map.helper.kml_layer"
+            class="%fungio_google_map.kml_layer.helper.class%"
             public="false"
         />
     </services>

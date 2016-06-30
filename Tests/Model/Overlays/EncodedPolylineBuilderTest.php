@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Overlays;
+namespace Fungio\GoogleMapBundle\Tests\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\Overlays\EncodedPolylineBuilder;
+use Fungio\GoogleMapBundle\Model\Overlays\EncodedPolylineBuilder;
 
 /**
  * Encoded polyline builder test.
@@ -20,7 +20,7 @@ use Ivory\GoogleMapBundle\Model\Overlays\EncodedPolylineBuilder;
  */
 class EncodedPolylineBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Overlays\EncodedPolylineBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Overlays\EncodedPolylineBuilder */
     protected $encodedPolylineBuilder;
 
     /**
@@ -28,7 +28,7 @@ class EncodedPolylineBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->encodedPolylineBuilder = new EncodedPolylineBuilder('Ivory\GoogleMap\Overlays\EncodedPolyline');
+        $this->encodedPolylineBuilder = new EncodedPolylineBuilder('Fungio\GoogleMap\Overlays\EncodedPolyline');
     }
 
     /**
@@ -41,7 +41,7 @@ class EncodedPolylineBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testInitialState()
     {
-        $this->assertSame('Ivory\GoogleMap\Overlays\EncodedPolyline', $this->encodedPolylineBuilder->getClass());
+        $this->assertSame('Fungio\GoogleMap\Overlays\EncodedPolyline', $this->encodedPolylineBuilder->getClass());
         $this->assertNull($this->encodedPolylineBuilder->getPrefixJavascriptVariable());
         $this->assertNull($this->encodedPolylineBuilder->getValue());
         $this->assertEmpty($this->encodedPolylineBuilder->getOptions());

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Services\DistanceMatrix;
+namespace Fungio\GoogleMapBundle\Tests\Model\Services\DistanceMatrix;
 
-use Ivory\GoogleMap\Services\Base\TravelMode;
-use Ivory\GoogleMap\Services\Base\UnitSystem;
-use Ivory\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder;
+use Fungio\GoogleMap\Services\Base\TravelMode;
+use Fungio\GoogleMap\Services\Base\UnitSystem;
+use Fungio\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder;
 
 /**
  * Distance matrix request builder test.
@@ -22,7 +22,7 @@ use Ivory\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBui
  */
 class DistanceMatrixRequestBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder */
     protected $distanceMatrixRequestBuilder;
 
     /**
@@ -31,7 +31,7 @@ class DistanceMatrixRequestBuilderTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         $this->distanceMatrixRequestBuilder = new DistanceMatrixRequestBuilder(
-            'Ivory\GoogleMap\Services\DistanceMatrix\DistanceMatrixRequest'
+            'Fungio\GoogleMap\Services\DistanceMatrix\DistanceMatrixRequest'
         );
     }
 
@@ -46,7 +46,7 @@ class DistanceMatrixRequestBuilderTest extends \PHPUnit_Framework_TestCase
     public function testInitialState()
     {
         $this->assertSame(
-            'Ivory\GoogleMap\Services\DistanceMatrix\DistanceMatrixRequest',
+            'Fungio\GoogleMap\Services\DistanceMatrix\DistanceMatrixRequest',
             $this->distanceMatrixRequestBuilder->getClass()
         );
 

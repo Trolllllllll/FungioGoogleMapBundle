@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Controls;
+namespace Fungio\GoogleMapBundle\Model\Controls;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Fungio\GoogleMapBundle\Model\AbstractBuilder;
 
 /**
  * Rotate control builder.
@@ -38,7 +38,7 @@ class RotateControlBuilder extends AbstractBuilder
      *
      * @param string $controlPosition The control position.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Controls\RotateControlBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Controls\RotateControlBuilder The builder.
      */
     public function setControlPosition($controlPosition)
     {
@@ -60,7 +60,7 @@ class RotateControlBuilder extends AbstractBuilder
     /**
      * {@inheritdoc}
      *
-     * @return \Ivory\GoogleMap\Controls\RotateControl The rotate control.
+     * @return \Fungio\GoogleMap\Controls\RotateControl The rotate control.
      */
     public function build()
     {

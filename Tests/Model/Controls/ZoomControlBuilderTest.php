@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Controls;
+namespace Fungio\GoogleMapBundle\Tests\Model\Controls;
 
-use Ivory\GoogleMap\Controls\ControlPosition;
-use Ivory\GoogleMap\Controls\ZoomControlStyle;
-use Ivory\GoogleMapBundle\Model\Controls\ZoomControlBuilder;
+use Fungio\GoogleMap\Controls\ControlPosition;
+use Fungio\GoogleMap\Controls\ZoomControlStyle;
+use Fungio\GoogleMapBundle\Model\Controls\ZoomControlBuilder;
 
 /**
  * Zoom control builder test.
@@ -22,7 +22,7 @@ use Ivory\GoogleMapBundle\Model\Controls\ZoomControlBuilder;
  */
 class ZoomControlBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Controls\ZoomControlBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Controls\ZoomControlBuilder */
     protected $zoomControlBuilder;
 
     /**
@@ -30,7 +30,7 @@ class ZoomControlBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->zoomControlBuilder = new ZoomControlBuilder('Ivory\GoogleMap\Controls\ZoomControl');
+        $this->zoomControlBuilder = new ZoomControlBuilder('Fungio\GoogleMap\Controls\ZoomControl');
     }
 
     /**
@@ -43,7 +43,7 @@ class ZoomControlBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testInitialState()
     {
-        $this->assertSame('Ivory\GoogleMap\Controls\ZoomControl', $this->zoomControlBuilder->getClass());
+        $this->assertSame('Fungio\GoogleMap\Controls\ZoomControl', $this->zoomControlBuilder->getClass());
         $this->assertNull($this->zoomControlBuilder->getControlPosition());
         $this->assertNull($this->zoomControlBuilder->getZoomControlStyle());
     }

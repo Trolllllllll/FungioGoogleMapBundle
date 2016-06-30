@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Services\Geocoding;
+namespace Fungio\GoogleMapBundle\Tests\Model\Services\Geocoding;
 
-use Ivory\GoogleMapBundle\Model\Services\Geocoding\GeocoderRequestBuilder;
+use Fungio\GoogleMapBundle\Model\Services\Geocoding\GeocoderRequestBuilder;
 
 /**
  * Geocoder request builder test.
@@ -20,7 +20,7 @@ use Ivory\GoogleMapBundle\Model\Services\Geocoding\GeocoderRequestBuilder;
  */
 class GeocoderRequestBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Services\Geocoding\GeocoderRequestBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Services\Geocoding\GeocoderRequestBuilder */
     protected $geocoderRequestBuilder;
 
     /**
@@ -29,7 +29,7 @@ class GeocoderRequestBuilderTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         $this->geocoderRequestBuilder = new GeocoderRequestBuilder(
-            'Ivory\GoogleMap\Services\Geocoding\GeocoderRequest'
+            'Fungio\GoogleMap\Services\Geocoding\GeocoderRequest'
         );
     }
 
@@ -44,7 +44,7 @@ class GeocoderRequestBuilderTest extends \PHPUnit_Framework_TestCase
     public function testInitialState()
     {
         $this->assertSame(
-            'Ivory\GoogleMap\Services\Geocoding\GeocoderRequest',
+            'Fungio\GoogleMap\Services\Geocoding\GeocoderRequest',
             $this->geocoderRequestBuilder->getClass()
         );
 

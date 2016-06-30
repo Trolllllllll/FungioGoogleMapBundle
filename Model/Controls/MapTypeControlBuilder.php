@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Controls;
+namespace Fungio\GoogleMapBundle\Model\Controls;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Fungio\GoogleMapBundle\Model\AbstractBuilder;
 
 /**
  * Map type control builder.
@@ -54,7 +54,7 @@ class MapTypeControlBuilder extends AbstractBuilder
      *
      * @param array $mapTypeIds The map types IDs.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Controls\MapTypeControlBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Controls\MapTypeControlBuilder The builder.
      */
     public function setMapTypeIds(array $mapTypeIds)
     {
@@ -78,7 +78,7 @@ class MapTypeControlBuilder extends AbstractBuilder
      *
      * @param string $controlPosition The control position.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Controls\MapTypeControlBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Controls\MapTypeControlBuilder The builder.
      */
     public function setControlPosition($controlPosition)
     {
@@ -102,7 +102,7 @@ class MapTypeControlBuilder extends AbstractBuilder
      *
      * @param string $mapTypeControlStyle The map type control style.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Controls\MapTypeControlBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Controls\MapTypeControlBuilder The builder.
      */
     public function setMapTypeControlStyle($mapTypeControlStyle)
     {
@@ -126,7 +126,7 @@ class MapTypeControlBuilder extends AbstractBuilder
     /**
      * {@inheritdoc}
      *
-     * @return \Ivory\GoogleMap\Controls\MapTypeControl The map type control.
+     * @return \Fungio\GoogleMap\Controls\MapTypeControl The map type control.
      */
     public function build()
     {

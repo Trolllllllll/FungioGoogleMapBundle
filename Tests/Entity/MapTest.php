@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Entity;
+namespace Fungio\GoogleMapBundle\Tests\Entity;
 
-use Ivory\GoogleMapBundle\Entity\Map;
+use Fungio\GoogleMapBundle\Entity\Map;
 
 /**
  * Map entity test.
@@ -20,7 +20,7 @@ use Ivory\GoogleMapBundle\Entity\Map;
  */
 class MapTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMap\Map */
+    /** @var \Fungio\GoogleMap\Map */
     protected $map;
 
     /**
@@ -41,7 +41,7 @@ class MapTest extends \PHPUnit_Framework_TestCase
 
     public function testInheritance()
     {
-        $this->assertInstanceOf('Ivory\GoogleMap\Map', $this->map);
+        $this->assertInstanceOf('Fungio\GoogleMap\Map', $this->map);
     }
 
     public function testPrePersistWithoutAutozoom()

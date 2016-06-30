@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Overlays;
+namespace Fungio\GoogleMapBundle\Tests\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\Overlays\PolygonBuilder;
+use Fungio\GoogleMapBundle\Model\Overlays\PolygonBuilder;
 
 /**
  * Polygon builder test.
@@ -20,7 +20,7 @@ use Ivory\GoogleMapBundle\Model\Overlays\PolygonBuilder;
  */
 class PolygonBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Overlays\PolygonBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\Overlays\PolygonBuilder */
     protected $polygonBuilder;
 
     /**
@@ -28,7 +28,7 @@ class PolygonBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->polygonBuilder = new PolygonBuilder('Ivory\GoogleMap\Overlays\Polygon');
+        $this->polygonBuilder = new PolygonBuilder('Fungio\GoogleMap\Overlays\Polygon');
     }
 
     /**
@@ -41,7 +41,7 @@ class PolygonBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testInitialState()
     {
-        $this->assertSame('Ivory\GoogleMap\Overlays\Polygon', $this->polygonBuilder->getClass());
+        $this->assertSame('Fungio\GoogleMap\Overlays\Polygon', $this->polygonBuilder->getClass());
         $this->assertNull($this->polygonBuilder->getPrefixJavascriptVariable());
         $this->assertEmpty($this->polygonBuilder->getCoordinates());
         $this->assertEmpty($this->polygonBuilder->getOptions());

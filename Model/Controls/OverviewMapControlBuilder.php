@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Controls;
+namespace Fungio\GoogleMapBundle\Model\Controls;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Fungio\GoogleMapBundle\Model\AbstractBuilder;
 
 /**
  * Overview map control builder.
@@ -38,7 +38,7 @@ class OverviewMapControlBuilder extends AbstractBuilder
      *
      * @param boolean $opened The opened flag.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Controls\OverviewMapControlBuilder The builder.
+     * @return \Fungio\GoogleMapBundle\Model\Controls\OverviewMapControlBuilder The builder.
      */
     public function setOpened($opened)
     {
@@ -60,7 +60,7 @@ class OverviewMapControlBuilder extends AbstractBuilder
     /**
      * {@inheritdoc}
      *
-     * @return \Ivory\GoogleMap\Controls\OverviewMapControl The overview map control.
+     * @return \Fungio\GoogleMap\Controls\OverviewMapControl The overview map control.
      */
     public function build()
     {

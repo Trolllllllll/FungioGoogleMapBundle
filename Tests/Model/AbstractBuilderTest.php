@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Ivory Google Map bundle package.
+ * This file is part of the Fungio Google Map bundle package.
  *
  * (c) Eric GELOEN <geloen.eric@gmail.com>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model;
+namespace Fungio\GoogleMapBundle\Tests\Model;
 
 /**
  * Abstract builder test.
@@ -18,7 +18,7 @@ namespace Ivory\GoogleMapBundle\Tests\Model;
  */
 class AbstractBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\AbstractBuilder */
+    /** @var \Fungio\GoogleMapBundle\Model\AbstractBuilder */
     protected $builder;
 
     /**
@@ -26,7 +26,7 @@ class AbstractBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->builder = $this->getMockBuilder('Ivory\GoogleMapBundle\Model\AbstractBuilder')
+        $this->builder = $this->getMockBuilder('Fungio\GoogleMapBundle\Model\AbstractBuilder')
             ->setConstructorArgs(array('\stdClass'))
             ->getMockForAbstractClass();
     }

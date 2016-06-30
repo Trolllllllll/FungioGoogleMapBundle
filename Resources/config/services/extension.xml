@@ -5,23 +5,23 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd"
 >
     <parameters>
-        <parameter key="ivory_google_map.helper.extension.core.class">Ivory\GoogleMap\Helper\Extension\CoreExtensionHelper</parameter>
-        <parameter key="ivory_google_map.helper.extension.info_box.class">Ivory\GoogleMap\Helper\Extension\InfoBoxExtensionHelper</parameter>
+        <parameter key="fungio_google_map.helper.extension.core.class">Fungio\GoogleMap\Helper\Extension\CoreExtensionHelper</parameter>
+        <parameter key="fungio_google_map.helper.extension.info_box.class">Fungio\GoogleMap\Helper\Extension\InfoBoxExtensionHelper</parameter>
     </parameters>
 
     <services>
         <service
-            id="ivory_google_map.helper.extension.core"
-            class="%ivory_google_map.helper.extension.core.class%"
+            id="fungio_google_map.helper.extension.core"
+            class="%fungio_google_map.helper.extension.core.class%"
             public="false"
         >
-            <argument type="service" id="ivory_google_map.helper.api" />
-            <argument type="service" id="ivory_google_map.helper.marker_cluster" />
+            <argument type="service" id="fungio_google_map.helper.api" />
+            <argument type="service" id="fungio_google_map.helper.marker_cluster" />
         </service>
 
         <service
-            id="ivory_google_map.helper.extension.info_box"
-            class="%ivory_google_map.helper.extension.info_box.class%"
+            id="fungio_google_map.helper.extension.info_box"
+            class="%fungio_google_map.helper.extension.info_box.class%"
             public="false"
         />
     </services>
