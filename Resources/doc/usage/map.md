@@ -80,6 +80,9 @@ fungio_google_map:
 
         # google map Api language, default en
         language: en
+
+        # google Api key, (To generate one read: https://console.developers.google.com/flows/enableapi?apiid=maps_backend,geocoding_backend,directions_backend,distance_matrix_backend,elevation_backend,places_backend&keyType=CLIENT_SIDE&reusekey=true)
+        api_key: YOUR_API_KEY
 ```
 
 ``` php

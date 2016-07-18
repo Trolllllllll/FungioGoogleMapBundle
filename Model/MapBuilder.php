@@ -45,6 +45,9 @@ class MapBuilder extends AbstractBuilder
     /** @var string */
     protected $language;
 
+    /** @var string */
+    protected $apiKey;
+
     /** @var array */
     protected $center;
 
@@ -266,6 +269,19 @@ class MapBuilder extends AbstractBuilder
     }
 
     /**
+     * Sets the Api Key.
+     *
+     * @param string $apiKey The API Key.
+     *
+     * @return \Fungio\GoogleMapBundle\Model\MapBuilder The builder.
+     */
+    public function setApiKey($apiKey)
+    {
+        $this->apiKey = $apiKey;
+        return $this;
+    }
+
+    /**
      * Gets the center.
      *
      * @return array The center.
@@ -431,6 +447,11 @@ class MapBuilder extends AbstractBuilder
 
         if ($this->language !== null) {
             $map->setLanguage($this->language);
+        }
+
+
+        if ($this->apiKey !== null) {
+            $map->setApiKey($this->apiKey);
         }
 
         if (!empty($this->center)) {
