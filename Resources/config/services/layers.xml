@@ -15,8 +15,7 @@
         <service
             id="fungio_google_map.kml_layer"
             class="%fungio_google_map.kml_layer.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.kml_layer.builder" method="build" />
         </service>
 

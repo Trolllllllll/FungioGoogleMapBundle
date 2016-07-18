@@ -34,8 +34,7 @@
         <service
             id="fungio_google_map.geocoder_request"
             class="%fungio_google_map.geocoder_request.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.geocoder_request.builder" method="build" />
         </service>
 

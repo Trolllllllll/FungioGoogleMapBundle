@@ -69,8 +69,7 @@
         <service
             id="fungio_google_map.circle"
             class="%fungio_google_map.circle.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.circle.builder" method="build" />
         </service>
 
@@ -85,8 +84,7 @@
         <service
             id="fungio_google_map.encoded_polyline"
             class="%fungio_google_map.encoded_polyline.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.encoded_polyline.builder" method="build" />
         </service>
 
@@ -115,8 +113,7 @@
         <service
             id="fungio_google_map.ground_overlay"
             class="%fungio_google_map.ground_overlay.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.ground_overlay.builder" method="build" />
         </service>
 
@@ -135,8 +132,7 @@
         <service
             id="fungio_google_map.info_window"
             class="%fungio_google_map.info_window.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.info_window.builder" method="build" />
         </service>
 
@@ -156,8 +152,7 @@
         <service
             id="fungio_google_map.marker_cluster"
             class="%fungio_google_map.marker_cluster.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.marker_cluster.builder" method="build" />
         </service>
 
@@ -204,8 +199,7 @@
         <service
             id="fungio_google_map.marker"
             class="%fungio_google_map.marker.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.marker.builder" method="build" />
         </service>
 
@@ -222,8 +216,7 @@
         <service
             id="fungio_google_map.marker_image"
             class="%fungio_google_map.marker_image.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.marker_image.builder" method="build" />
         </service>
 
@@ -243,8 +236,7 @@
         <service
             id="fungio_google_map.marker_shape"
             class="%fungio_google_map.marker_shape.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.marker_shape.builder" method="build" />
         </service>
 
@@ -262,8 +254,7 @@
         <service
             id="fungio_google_map.polygon"
             class="%fungio_google_map.polygon.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.polygon.builder" method="build" />
         </service>
 
@@ -277,8 +268,7 @@
         <service
             id="fungio_google_map.polyline"
             class="%fungio_google_map.polyline.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.polyline.builder" method="build" />
         </service>
 
@@ -296,8 +286,7 @@
         <service
             id="fungio_google_map.rectangle"
             class="%fungio_google_map.rectangle.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.rectangle.builder" method="build" />
         </service>
 

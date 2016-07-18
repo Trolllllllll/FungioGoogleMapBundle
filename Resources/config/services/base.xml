@@ -27,8 +27,7 @@
         <service
             id="fungio_google_map.coordinate"
             class="%fungio_google_map.coordinate.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.coordinate.builder" method="build" />
         </service>
 
@@ -42,8 +41,7 @@
         <service
             id="fungio_google_map.bound"
             class="%fungio_google_map.bound.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.bound.builder" method="build" />
         </service>
 
@@ -60,8 +58,7 @@
         <service
             id="fungio_google_map.point"
             class="%fungio_google_map.point.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.point.builder" method="build" />
         </service>
 
@@ -75,8 +72,7 @@
         <service
             id="fungio_google_map.size"
             class="%fungio_google_map.size.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.size.builder" method="build" />
         </service>
 

@@ -18,8 +18,7 @@
         <service
             id="fungio_google_map.event_manager"
             class="%fungio_google_map.event_manager.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.event_manager.builder" method="build" />
         </service>
 
@@ -37,8 +36,7 @@
         <service
             id="fungio_google_map.event"
             class="%fungio_google_map.event.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.event.builder" method="build" />
         </service>
 

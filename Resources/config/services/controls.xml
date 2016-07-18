@@ -44,23 +44,20 @@
         <service
             id="fungio_google_map.map_type_control"
             class="%fungio_google_map.map_type_control.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.map_type_control.builder" method="build" />
         </service>
 
         <service
             id="fungio_google_map.map_type_control.builder"
-            class="%fungio_google_map.map_type_control.builder.class%"
-        >
+            class="%fungio_google_map.map_type_control.builder.class%">
             <argument>%fungio_google_map.map_type_control.class%</argument>
         </service>
 
         <service
             id="fungio_google_map.helper.map_type_control"
             class="%fungio_google_map.map_type_control.helper.class%"
-            public="false"
-        >
+            public="false">
             <argument type="service" id="fungio_google_map.helper.map_type_id" />
             <argument type="service" id="fungio_google_map.helper.control_position" />
             <argument type="service" id="fungio_google_map.helper.map_type_control_style" />
@@ -70,8 +67,7 @@
         <service
             id="fungio_google_map.overview_map_control"
             class="%fungio_google_map.overview_map_control.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.overview_map_control.builder" method="build" />
         </service>
 
@@ -92,8 +88,7 @@
         <service
             id="fungio_google_map.pan_control"
             class="%fungio_google_map.pan_control.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.pan_control.builder" method="build" />
         </service>
 
@@ -113,8 +108,7 @@
         <service
             id="fungio_google_map.rotate_control"
             class="%fungio_google_map.rotate_control.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.rotate_control.builder" method="build" />
         </service>
 
@@ -134,8 +128,7 @@
         <service
             id="fungio_google_map.scale_control"
             class="%fungio_google_map.scale_control.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.scale_control.builder" method="build" />
         </service>
 
@@ -156,15 +149,13 @@
         <service
             id="fungio_google_map.street_view_control"
             class="%fungio_google_map.street_view_control.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.street_view_control.builder" method="build" />
         </service>
 
         <service
             id="fungio_google_map.street_view_control.builder"
-            class="%fungio_google_map.street_view_control.builder.class%"
-        >
+            class="%fungio_google_map.street_view_control.builder.class%">
             <argument>%fungio_google_map.street_view_control.class%</argument>
         </service>
 
@@ -180,8 +171,7 @@
         <service
             id="fungio_google_map.zoom_control"
             class="%fungio_google_map.zoom_control.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.zoom_control.builder" method="build" />
         </service>
 

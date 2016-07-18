@@ -17,8 +17,7 @@
         <service
             id="fungio_google_map.map"
             class="%fungio_google_map.map.class%"
-        >
-            <!--scope="prototype"-->
+            shared="false">
             <factory service="fungio_google_map.map.builder" method="build" />
         </service>
 
