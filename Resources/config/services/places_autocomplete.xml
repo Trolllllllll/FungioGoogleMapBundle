@@ -17,6 +17,7 @@
             <!--scope="request"-->
             <argument type="service" id="fungio_google_map.places_autocomplete.helper" />
             <argument type="service" id="request_stack" />
+            <argument type="service" id="request_stack" />
 
             <tag name="form.type" alias="places_autocomplete" />
         </service>

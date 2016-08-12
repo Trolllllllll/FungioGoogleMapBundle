@@ -152,15 +152,26 @@ class FungioGoogleMapExtension extends Extension
     protected function loadApi(array $config, ContainerBuilder $container)
     {
         if (isset($config['api']['helper_class'])) {
-            $container
-                ->getDefinition('fungio_google_map.helper.api')
+            $builderDefinition = $container
+                ->getDefinition('fungio_google_map.helper.api');
+
+            $builderDefinition
                 ->setClass($config['api']['helper_class']);
+
+            if (isset($config['map']['api_key'])) {
+                $builderDefinition->addMethodCall('setApiKey', array($config['map']['api_key']));
+            }
         }
 
         if (isset($config['api']['libraries'])) {
             $container
                 ->getDefinition('fungio_google_map.map.builder')
                 ->addMethodCall('setLibraries', array($config['api']['libraries']));
+        }
+
+        $apiHelperDefinition = $container->getDefinition('fungio_google_map.helper.api');
+        if (isset($config['map']['api_key'])) {
+            $apiHelperDefinition->addMethodCall('setApiKey', array($config['map']['api_key']));
         }
     }
 
@@ -240,10 +251,6 @@ class FungioGoogleMapExtension extends Extension
 
         if (isset($config['map']['language'])) {
             $builderDefinition->addMethodCall('setLanguage', array($config['map']['language']));
-        }
-
-        if (isset($config['map']['api_key'])) {
-            $builderDefinition->addMethodCall('setApiKey', array($config['map']['api_key']));
         }
 
         $mapOptions = array();

@@ -14,6 +14,7 @@ namespace Fungio\GoogleMapBundle\Form\Type;
 use Fungio\GoogleMap\Helper\Places\AutocompleteHelper;
 use Fungio\GoogleMap\Places\Autocomplete;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\Form\FormView;
@@ -100,7 +101,7 @@ class PlacesAutocompleteType extends AbstractType
 
         if ($options['bound'] !== null) {
             if (is_array($options['bound'])) {
-                call_user_func_array(array($autocomplete, 'setBound'), $options['bound']);
+                call_user_func_array([$autocomplete, 'setBound'], $options['bound']);
             } else {
                 $autocomplete->setBound($options['bound']);
             }
@@ -143,25 +144,23 @@ class PlacesAutocompleteType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function defaultOptions(OptionsResolver $resolver)
+    public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults(array(
+        $resolver->setDefaults([
             'prefix'                 => null,
             'bound'                  => null,
-            'types'                  => array(),
-            'component_restrictions' => array(),
+            'types'                  => [],
+            'component_restrictions' => [],
             'async'                  => false,
             'language'               => $this->getRequest()->getLocale(),
-        ));
+        ]);
 
-        $resolver->setAllowedTypes(array(
-            'prefix'                 => array('string', 'null'),
-            'bound'                  => array('Fungio\GoogleMap\Base\Bound', 'array', 'null'),
-            'types'                  => array('array'),
-            'component_restrictions' => array('array'),
-            'async'                  => array('bool'),
-            'language'               => array('string'),
-        ));
+        $resolver->setAllowedTypes('prefix', ['string', 'null']);
+        $resolver->setAllowedTypes('bound', ['Fungio\GoogleMap\Base\Bound', 'array', 'null']);
+        $resolver->setAllowedTypes('types', ['array']);
+        $resolver->setAllowedTypes('component_restrictions', ['array']);
+        $resolver->setAllowedTypes('async', ['bool']);
+        $resolver->setAllowedTypes('language', ['string']);
     }
 
     /**
@@ -169,14 +168,6 @@ class PlacesAutocompleteType extends AbstractType
      */
     public function getParent()
     {
-        return 'text';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getName()
-    {
-        return 'places_autocomplete';
+        return TextType::class;
     }
 }
