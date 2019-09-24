@@ -27,8 +27,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('fungio_google_map');
+        $treeBuilder = new TreeBuilder('fungio_google_map');
+        $rootNode = $treeBuilder->getRootNode();
 
         // Normalization section
         $this->addNormalizationSection($rootNode);
