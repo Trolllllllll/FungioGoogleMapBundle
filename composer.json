@@ -33,6 +33,11 @@
         "psr-0": { "Fungio\\GoogleMapBundle\\": "" }
     },
     "target-dir": "Fungio/GoogleMapBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "4.3.x-dev"
+        }
+    },
     "config": {
         "bin-dir": "bin/"
     }
