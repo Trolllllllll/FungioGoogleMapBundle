@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": ">=5.6.0",
-        "symfony/framework-bundle": "3.*|4.*",
+        "symfony/framework-bundle": "2.8|3.*",
         "fungio/google-map": "*"
     },
     "require-dev": {
@@ -33,6 +33,11 @@
         "psr-0": { "Fungio\\GoogleMapBundle\\": "" }
     },
     "target-dir": "Fungio/GoogleMapBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.4.x-dev"
+        }
+    },
     "config": {
         "bin-dir": "bin/"
     }
