@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": ">=7.1.0",
-        "symfony/framework-bundle": "4.*",
+        "symfony/framework-bundle": "4.*|5.*",
         "fungio/google-map": "*"
     },
     "require-dev": {
