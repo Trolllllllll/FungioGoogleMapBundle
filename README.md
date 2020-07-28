@@ -3,7 +3,7 @@
 [![Coverage Status](https://coveralls.io/repos/fungio/FungioGoogleMapBundle/badge.png?branch=master)](https://coveralls.io/r/fungio/FungioGoogleMapBundle?branch=master)
 
 The bundle provides an integration of the [Fungio Google Map](https://github.com/fungio/fungio-google-map) library for
-your Symfony2 project.
+your Symfony project.
 
 ## Documentation
 
