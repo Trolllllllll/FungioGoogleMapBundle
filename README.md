@@ -42,7 +42,7 @@ your Symfony2 project.
 
 ## Cookbook
 
-  1. [Inject an Fungio service](http://github.com/fungio/FungioGoogleMapBundle/blob/master/Resources/doc/cookbook/dependency_injection.md)
+  1. [Inject a Fungio service](http://github.com/fungio/FungioGoogleMapBundle/blob/master/Resources/doc/cookbook/dependency_injection.md)
 
 ## Contribute
 
